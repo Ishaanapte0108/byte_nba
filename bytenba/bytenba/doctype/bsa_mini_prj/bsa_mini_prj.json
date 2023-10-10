@@ -96,7 +96,7 @@
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2023-09-30 21:16:08.376266",
+ "modified": "2023-10-05 22:00:37.773946",
  "modified_by": "Administrator",
  "module": "bytenba",
  "name": "BSA-Mini Prj",
@@ -111,6 +111,18 @@
    "read": 1,
    "report": 1,
    "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "vit_emp",
    "share": 1,
    "write": 1
   }

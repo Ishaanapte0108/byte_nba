@@ -1,156 +1,168 @@
 {
-  "actions": [],
-  "allow_rename": 1,
-  "creation": "2023-09-11 21:49:51.634056",
-  "default_view": "List",
-  "doctype": "DocType",
-  "editable_grid": 1,
-  "engine": "InnoDB",
-  "field_order": [
-    "directions",
-    "academic_year",
-    "professor",
-    "criteria_1",
-    "mms_a",
-    "mms_b",
-    "mapping",
-    "mapping_opts",
-    "column_break_rc88y",
-    "criteria_2",
-    "engg_a",
-    "engg_b",
-    "engg_c",
-    "engg_d",
-    "reviewer",
-    "link_for_evidence",
-    "marks_gained",
-    "self_appraisal_score"
-  ],
-  "fields": [
-    {
-      "fieldname": "mapping",
-      "fieldtype": "HTML",
-      "label": "Mapping",
-      "options": "<p><b>Mapping</b></p>"
-    },
-    {
-      "fieldname": "criteria_1",
-      "fieldtype": "HTML",
-      "label": "Criteria_1",
-      "options": "<p><b>For MMS</b></p>"
-    },
-    {
-      "fieldname": "mms_a",
-      "fieldtype": "Float",
-      "label": "Uploading videos of published case studies"
-    },
-    {
-      "fieldname": "professor",
-      "fieldtype": "Read Only",
-      "label": "Professor"
-    },
-    {
-      "fieldname": "reviewer",
-      "fieldtype": "Link",
-      "in_list_view": 1,
-      "label": "Reviewer",
-      "options": "Professors",
-      "reqd": 1
-    },
-    {
-      "fieldname": "link_for_evidence",
-      "fieldtype": "Data",
-      "in_list_view": 1,
-      "label": "Link for evidence",
-      "reqd": 1
-    },
-    {
-      "fieldname": "mms_b",
-      "fieldtype": "Float",
-      "label": "Case study published including last 6 months"
-    },
-    {
-      "fieldname": "criteria_2",
-      "fieldtype": "HTML",
-      "label": "Criteria_2",
-      "options": "<p><b>For Engineering</b></p>"
-    },
-    {
-      "fieldname": "engg_a",
-      "fieldtype": "Float",
-      "label": "Uploading videos of new experiments/PBL prepared during the PA evaluation period"
-    },
-    {
-      "fieldname": "engg_b",
-      "fieldtype": "Float",
-      "label": "Use of new tools/simulators/virtual lab"
-    },
-    {
-      "fieldname": "engg_c",
-      "fieldtype": "Float",
-      "label": "Quality of PB statements"
-    },
-    {
-      "fieldname": "engg_d",
-      "fieldtype": "Float",
-      "label": "Continuous assessment"
-    },
-    {
-      "fieldname": "column_break_rc88y",
-      "fieldtype": "Column Break"
-    },
-    {
-      "fieldname": "mapping_opts",
-      "fieldtype": "Select",
-      "options": "Strongly to CO\nModerately to CO\nNot mapped to CO"
-    },
-    {
-      "fieldname": "directions",
-      "fieldtype": "HTML",
-      "label": "Directions",
-      "options": "<style>\n        p {\n            margin-bottom: 30px;\n        }\n </style>\n\n    <p><b>Take average of multiple courses/activities</b></p>\n"
-    },
-    {
-      "fieldname": "academic_year",
-      "fieldtype": "Data",
-      "label": "Academic Year",
-      "reqd": 1
-    },
-    {
-      "fieldname": "self_appraisal_score",
-      "fieldtype": "Float",
-      "label": "Self_Appraisal Score",
-      "read_only": 1
-    },
-    {
-      "fieldname": "marks_gained",
-      "fieldtype": "Float",
-      "label": "Marks obtained",
-      "read_only": 1
-    }
-  ],
-  "index_web_pages_for_search": 1,
-  "links": [],
-  "modified": "2023-09-30 20:45:36.202631",
-  "modified_by": "Administrator",
-  "module": "bytenba",
-  "name": "Lab work-Case study",
-  "owner": "Administrator",
-  "permissions": [
-    {
-      "create": 1,
-      "delete": 1,
-      "email": 1,
-      "export": 1,
-      "print": 1,
-      "read": 1,
-      "report": 1,
-      "role": "System Manager",
-      "share": 1,
-      "write": 1
-    }
-  ],
-  "sort_field": "modified",
-  "sort_order": "DESC",
-  "states": []
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2023-09-11 21:49:51.634056",
+ "default_view": "List",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "directions",
+  "academic_year",
+  "professor",
+  "criteria_1",
+  "mms_a",
+  "mms_b",
+  "mapping",
+  "mapping_opts",
+  "column_break_rc88y",
+  "criteria_2",
+  "engg_a",
+  "engg_b",
+  "engg_c",
+  "engg_d",
+  "reviewer",
+  "link_for_evidence",
+  "marks_gained",
+  "self_appraisal_score"
+ ],
+ "fields": [
+  {
+   "fieldname": "mapping",
+   "fieldtype": "HTML",
+   "label": "Mapping",
+   "options": "<p><b>Mapping</b></p>"
+  },
+  {
+   "fieldname": "criteria_1",
+   "fieldtype": "HTML",
+   "label": "Criteria_1",
+   "options": "<p><b>For MMS</b></p>"
+  },
+  {
+   "fieldname": "mms_a",
+   "fieldtype": "Float",
+   "label": "Uploading videos of published case studies"
+  },
+  {
+   "fieldname": "professor",
+   "fieldtype": "Read Only",
+   "label": "Professor"
+  },
+  {
+   "fieldname": "reviewer",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Reviewer",
+   "options": "Professors",
+   "reqd": 1
+  },
+  {
+   "fieldname": "link_for_evidence",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Link for evidence",
+   "reqd": 1
+  },
+  {
+   "fieldname": "mms_b",
+   "fieldtype": "Float",
+   "label": "Case study published including last 6 months"
+  },
+  {
+   "fieldname": "criteria_2",
+   "fieldtype": "HTML",
+   "label": "Criteria_2",
+   "options": "<p><b>For Engineering</b></p>"
+  },
+  {
+   "fieldname": "engg_a",
+   "fieldtype": "Float",
+   "label": "Uploading videos of new experiments/PBL prepared during the PA evaluation period"
+  },
+  {
+   "fieldname": "engg_b",
+   "fieldtype": "Float",
+   "label": "Use of new tools/simulators/virtual lab"
+  },
+  {
+   "fieldname": "engg_c",
+   "fieldtype": "Float",
+   "label": "Quality of PB statements"
+  },
+  {
+   "fieldname": "engg_d",
+   "fieldtype": "Float",
+   "label": "Continuous assessment"
+  },
+  {
+   "fieldname": "column_break_rc88y",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "mapping_opts",
+   "fieldtype": "Select",
+   "options": "Strongly to CO\nModerately to CO\nNot mapped to CO"
+  },
+  {
+   "fieldname": "directions",
+   "fieldtype": "HTML",
+   "label": "Directions",
+   "options": "<style>\n        p {\n            margin-bottom: 30px;\n        }\n </style>\n\n    <p><b>Take average of multiple courses/activities</b></p>\n"
+  },
+  {
+   "fieldname": "academic_year",
+   "fieldtype": "Data",
+   "label": "Academic Year",
+   "reqd": 1
+  },
+  {
+   "fieldname": "self_appraisal_score",
+   "fieldtype": "Float",
+   "label": "Self_Appraisal Score",
+   "read_only": 1
+  },
+  {
+   "fieldname": "marks_gained",
+   "fieldtype": "Float",
+   "label": "Marks obtained",
+   "read_only": 1
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2023-10-05 22:01:58.593074",
+ "modified_by": "Administrator",
+ "module": "bytenba",
+ "name": "Lab work-Case study",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "vit_emp",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
 }

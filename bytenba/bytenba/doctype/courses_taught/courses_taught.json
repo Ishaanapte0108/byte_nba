@@ -93,7 +93,7 @@
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2023-09-30 21:25:04.121989",
+ "modified": "2023-10-05 22:02:53.728456",
  "modified_by": "Administrator",
  "module": "bytenba",
  "name": "Courses taught",
@@ -120,6 +120,18 @@
    "read": 1,
    "report": 1,
    "role": "faculty",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "vit_emp",
    "share": 1,
    "write": 1
   }

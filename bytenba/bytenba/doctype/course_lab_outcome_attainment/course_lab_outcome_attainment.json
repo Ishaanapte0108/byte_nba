@@ -82,7 +82,7 @@
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2023-09-30 20:53:19.278784",
+ "modified": "2023-10-05 22:01:10.031357",
  "modified_by": "Administrator",
  "module": "bytenba",
  "name": "Course_Lab outcome attainment",
@@ -109,6 +109,18 @@
    "read": 1,
    "report": 1,
    "role": "faculty",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "vit_emp",
    "share": 1,
    "write": 1
   }
