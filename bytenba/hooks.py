@@ -44,7 +44,9 @@ doctype_js = {
     "BSA guest lecture": "public/js/custom_cert_courses.js",
     "BSA-Mini Prj":"public/js/custom_cert_courses.js",
     "Lab work-Case study":"public/js/custom_cert_courses.js",
-    "BSA-Co-curricular":"public/js/custom_cert_courses.js"
+    "BSA-Co-curricular":"public/js/custom_cert_courses.js",
+    "Grades in preceding sem preview AI13":"public/js/custom_cert_courses.js",
+    "Grades in preceding sem preview AI14":"public/js/custom_cert_courses.js"
 }
 
 # Home Pages

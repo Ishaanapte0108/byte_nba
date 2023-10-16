@@ -2,6 +2,7 @@
  "charts": [],
  "content": "[{\"id\":\"6K6sDlYKPD\",\"type\":\"header\",\"data\":{\"text\":\"<span style=\\\"font-size: 18px;\\\"><b>AppraisePro</b></span>\",\"col\":12}},{\"id\":\"Fpvo2u9Mb2\",\"type\":\"card\",\"data\":{\"card_name\":\"Academic Involvement\",\"col\":12}}]",
  "creation": "2021-01-02 10:51:16.579957",
+ "custom_blocks": [],
  "docstatus": 0,
  "doctype": "Workspace",
  "for_user": "",
@@ -70,7 +71,7 @@
    "hidden": 0,
    "is_query_report": 0,
    "label": "Academic Involvement",
-   "link_count": 9,
+   "link_count": 11,
    "onboard": 0,
    "type": "Card Break"
   },
@@ -163,9 +164,29 @@
    "link_type": "DocType",
    "onboard": 0,
    "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Grades in preceding semester (AI13)",
+   "link_count": 0,
+   "link_to": "Grades in preceding sem preview AI13",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Grades in preceding sem preview (AI14)",
+   "link_count": 0,
+   "link_to": "Grades in preceding sem preview AI14",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
   }
  ],
- "modified": "2023-10-05 23:05:22.719926",
+ "modified": "2023-10-17 00:43:27.027248",
  "modified_by": "Administrator",
  "module": "bytenba",
  "name": "AppraisePro",
