@@ -4,7 +4,7 @@ ERP for Clg
 
 #### License
 
-MIT
+__Forms:__ 
 
 - AI1: ishaan (done)
 - AI2: vinay (done)
@@ -19,6 +19,7 @@ MIT
 - AI-13: vinay (done)
 - AI-14: vinay (done)
 
+__To-do list:__
 
 1> directions regarding how the form should be filled
 
