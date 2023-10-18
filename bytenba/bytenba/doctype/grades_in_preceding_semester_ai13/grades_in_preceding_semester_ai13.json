@@ -1,42 +1,28 @@
 {
  "actions": [],
  "allow_rename": 1,
- "creation": "2023-10-17 00:10:09.684033",
+ "creation": "2023-10-16 23:26:56.529874",
  "default_view": "List",
  "doctype": "DocType",
  "editable_grid": 1,
  "engine": "InnoDB",
  "field_order": [
   "professor",
-  "column_break_i0brl",
+  "column_break_ybcib",
   "academic_year",
-  "section_break_yeoga",
+  "section_break_ikkja",
   "precd_sem_grade",
-  "column_break_rz2gc",
+  "column_break_hczgk",
   "self_appraisal_score",
-  "section_break_5ut0i",
+  "section_break_058rk",
   "evidence_btn"
  ],
  "fields": [
   {
-   "fieldname": "professor",
-   "fieldtype": "Read Only",
-   "label": "Professor"
-  },
-  {
-   "fieldname": "column_break_i0brl",
-   "fieldtype": "Column Break"
-  },
-  {
-   "fieldname": "academic_year",
-   "fieldtype": "Data",
-   "in_list_view": 1,
-   "label": "Academic Year",
-   "reqd": 1
-  },
-  {
-   "fieldname": "section_break_yeoga",
-   "fieldtype": "Section Break"
+   "fieldname": "self_appraisal_score",
+   "fieldtype": "Int",
+   "label": "Self appraisal score",
+   "read_only": 1
   },
   {
    "default": "A",
@@ -46,30 +32,46 @@
    "options": "A\nB\nC\nOthers"
   },
   {
-   "fieldname": "column_break_rz2gc",
+   "fieldname": "academic_year",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Academic Year",
+   "reqd": 1
+  },
+  {
+   "fieldname": "professor",
+   "fieldtype": "Read Only",
+   "label": "Professor"
+  },
+  {
+   "fieldname": "section_break_ikkja",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "column_break_ybcib",
    "fieldtype": "Column Break"
   },
   {
-   "fieldname": "self_appraisal_score",
-   "fieldtype": "Int",
-   "label": "Self appraisal score"
+   "fieldname": "column_break_hczgk",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "section_break_058rk",
+   "fieldtype": "Section Break"
   },
   {
    "fieldname": "evidence_btn",
    "fieldtype": "Attach",
-   "label": "Link for evidence"
-  },
-  {
-   "fieldname": "section_break_5ut0i",
-   "fieldtype": "Section Break"
+   "label": "Link for evidence",
+   "reqd": 1
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2023-10-17 00:35:24.957951",
+ "modified": "2023-10-18 21:24:37.820978",
  "modified_by": "Administrator",
  "module": "bytenba",
- "name": "Grades in preceding sem preview AI14",
+ "name": "Grades in preceding semester AI13",
  "owner": "Administrator",
  "permissions": [
   {

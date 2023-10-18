@@ -8,7 +8,7 @@ import re
 pattern = re.compile(r'^\d{4}-\d{4}$')
 doctype = 'Grades in preceding sem preview'
 
-class GradesinprecedingsempreviewAI13(Document):
+class GradesinprecedingsemesterAI13(Document):
 	def before_save(self):
 		if self.precd_sem_grade=="A":
 			self.self_appraisal_score = 100

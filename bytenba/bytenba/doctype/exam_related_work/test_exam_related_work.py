@@ -5,5 +5,5 @@
 from frappe.tests.utils import FrappeTestCase
 
 
-class TestGradesinprecedingsempreviewAI13(FrappeTestCase):
+class TestExamrelatedwork(FrappeTestCase):
 	pass
