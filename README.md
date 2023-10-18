@@ -6,18 +6,18 @@ ERP for Clg
 
 MIT
 
-AI1: ishaan (done)
-AI2: vinay (done)
-AI-3.1: ishaan (done)
-AI-3.2: ishaan (done)
-AI-3.3: pallavi (done, marks_obtained formula pending)
-AI-3.4: vinay (done)
-AI-4: vinay (done)
-AI-5: vinay (done)
-AI-6: pallavi (done)
-AI-12: vinay (done)
-AI-13: vinay (done)
-AI-14: vinay (done)
+- AI1: ishaan (done)
+- AI2: vinay (done)
+- AI-3.1: ishaan (done)
+- AI-3.2: ishaan (done)
+- AI-3.3: pallavi (done, marks_obtained formula pending)
+- AI-3.4: vinay (done)
+- AI-4: vinay (done)
+- AI-5: vinay (done)
+- AI-6: pallavi (done)
+- AI-12: vinay (done)
+- AI-13: vinay (done)
+- AI-14: vinay (done)
 
 
 1> directions regarding how the form should be filled
