@@ -88,3 +88,6 @@
 //     frm.refresh_field("select_reviewer");
 //   },
 // });
+
+// console.log(window.location.href)
+let variable = "hellp"

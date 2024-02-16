@@ -52,7 +52,7 @@ def execute(filters=None):
 	data = frappe.db.get_list("Professors", fields = ['name', 'full_name', 'faculty_designation'], filters = filters_faculty)
 	# doctypes = frappe.db.get_list("DocType", pluck= "name", filters = {'module': ['=', 'bytenba'], 'istable': ['!=', 1]})
 
-	doctypes = ['Certification for courses allotted', 'Courses taught', 'BSA guest lecture','BSA industrial visit', 'BSA-Co-curricular', 		'Laboratory Work Or Case Studies']
+	doctypes = ['Certification for courses allotted', 'Courses taught', 'BSA guest lecture','BSA industrial visit', 'BSA-Co-curricular', 		'Laboratory Work Or Case Studies', 'Course-lab outcome attainment']
 	#  'Course_Lab outcome attainment',
 	#  'BSA-Mini Prj',
 	#  'BE Projects',

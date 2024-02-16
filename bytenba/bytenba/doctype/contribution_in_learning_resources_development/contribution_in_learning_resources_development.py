@@ -1,71 +1,68 @@
-# Copyright (c) 2023, byte_team and contributors
-# For license information, please see license.txt
-
 import frappe
 from frappe.model.document import Document
+import bytenba.form_validation as validation
 import re
 
-Doctype = 'Contribution In Learning Resources Development'
+Doctype = 'Contribution in learning resources development'
 pattern_for_wtg = r'\((\s*(?:\d+\.\d+|\d+)\s*)\)'
-pattern_for_ay = re.compile(r'^\d{4}-\d{4}$')
 
 
 class Contributioninlearningresourcesdevelopment(Document):	
 
 	def autoname(self):
-		self.name = f'AI8Engg_{self.academic_year}_{self.semester}_{self.professor}'
+		self.name = f'AI7_{self.owner}_{self.academic_year}_{self.semester}'
 
 	def before_save(self):
-		self_appraisal_score = compute_marks(self)
-		self.self_appraisal_score = self_appraisal_score
+		self.self_appraisal_score = compute_marks(self)
 
 	def validate(self):
-		#validate academic year str
-		academic_yr_str = self.academic_year
-		if re.match(pattern_for_ay, academic_yr_str):
-			years = academic_yr_str.split("-")
-			if int(years[1]) != int(years[0]) + 1:
-				frappe.throw('Academic year entered incorrectly')
-		else:
-			frappe.throw('Academic year must be of the form like 2022-2023')
-
-		#validate if same record exists in database
-		existing_record = frappe.db.exists('BE Projects', {'name': self.name})
-		#check if it is not the document currently begin worked upon
-		if existing_record and existing_record != self.name:
-			frappe.throw('There already exists such a record in the database')
+		validation.standard_validation(self)
 			
 
 def compute_marks(self):
 
-	'''criteria 1'''
-	match = re.search(pattern_for_wtg, self.criteria_1)
-	if match:
-		val1 = float(match.group(1).strip())
-	else:
-		frappe.throw('Error Fetching Field Weightages')
+	counter = 0
 
-	'''criteria 1'''
-	match = re.search(pattern_for_wtg, self.criteria_2)
-	if match:
-		val2 = float(match.group(1).strip())
-	else:
-		frappe.throw('Error Fetching Field Weightages')
+	pas = [[],[],[],[]]
 
-	'''criteria 1'''
-	match = re.search(pattern_for_wtg, self.criteria_3)
-	if match:
-		val3 = float(match.group(1).strip())
-	else:
-		frappe.throw('Error Fetching Field Weightages')
+	for item in self.criteria_table:
+		
+		if counter > 2:
+			frappe.throw('Can only have three entries in the table')
 
-	'''criteria 1'''
-	match = re.search(pattern_for_wtg, self.criteria_4)
-	if match:
-		val4 = float(match.group(1).strip())
-	else:
-		frappe.throw('Error Fetching Field Weightages')
+		else:
+			counter +=1
 
-	product_of_wts = val1*val2*val3*val4*val5
-	return product_of_wts
+			if not 0<=item.benchmark_1<=1:
+				frappe.throw('All benchmark quality factors must be between 0 and 1')
+			if not 0<=item.benchmark_2<=1:
+				frappe.throw('All benchmark quality factors must be between 0 and 1')
+			if not 0<=item.benchmark_3<=1:
+				frappe.throw('All benchmark quality factors must be between 0 and 1')
+			if not 0<=item.benchmark_4<=1:
+				frappe.throw('All benchmark quality factors must be between 0 and 1')
 
+			val1 = item.benchmark_1*40
+			val2 = item.benchmark_2*30
+			val3 = item.benchmark_3*20
+			val4 = item.benchmark_4*10
+			
+			pas[0].append(val1)
+			pas[1].append(val2)
+			pas[2].append(val3)
+			pas[3].append(val4)	
+
+	new_pas = []
+	
+	for i in pas:
+		if not i:
+			new_pas.append(0)
+		else:
+			new_pas.append(sum(i)/len(i))
+
+	self.avg_benchmark_1 = new_pas[0]
+	self.avg_benchmark_2 = new_pas[1]
+	self.avg_benchmark_3 = new_pas[2]
+	self.avg_benchmark_4 = new_pas[3]
+
+	return round(sum(new_pas))

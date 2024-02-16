@@ -43,6 +43,8 @@ doctype_list_js = {
   "Internal revenue generation": "bytenba/consultancy_and_corporate_training_bucket/doctype/internal_revenue_generation/internal_revenue_generation_list.js"
 }
 
+extend_bootinfo = "bytenba.controller.boot_session"
+
 # doctype_tree_js = {"doctype" : "public/js/doctype_tree.js"}
 # doctype_calendar_js = {"doctype" : "public/js/doctype_calendar.js"}
 
@@ -56,8 +58,11 @@ doctype_js = {
     # "BSA guest lecture": "public/js/custom_cert_courses.js",
     # "BSA-Mini Prj":"public/js/custom_cert_courses.js",
     # "BSA-Co-curricular":"public/js/custom_cert_courses.js"
-      # "Professors":"public/js/custom_cert_courses.js",
+    # "Professors":"public/js/custom_cert_courses.js",
+    # "Course-lab outcome attainment": "public/js/custom_cert_courses.js",
 }
+
+
 sounds = [
 	{"name": "email", "src": "/assets/frappe/sounds/email.mp3", "volume": 0.1},
 	{"name": "submit", "src": "/assets/frappe/sounds/submit.mp3", "volume": 0.1},
@@ -141,9 +146,9 @@ doc_events = {
     #     "on_trash": "bytenba.controller.delete_from_cloud"
     # }
 
-    "Certification for courses allotted": {
-      "on_trash": "bytenba.form_validation.validate_delete"
-    }
+    # "Certification for courses allotted": {
+    #   "on_trash": "bytenba.form_validation.validate_delete"
+    # }
 }
 
 

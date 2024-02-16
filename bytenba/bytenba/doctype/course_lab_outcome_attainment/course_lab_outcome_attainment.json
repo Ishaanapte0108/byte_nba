@@ -1,10 +1,8 @@
 {
  "actions": [],
  "allow_rename": 1,
- "creation": "2023-10-18 18:16:18.300485",
- "default_view": "List",
+ "creation": "2024-02-14 15:07:51.044239",
  "doctype": "DocType",
- "editable_grid": 1,
  "engine": "InnoDB",
  "field_order": [
   "dir",
@@ -25,20 +23,15 @@
   "column_break_vbeg",
   "semester",
   "reviewer",
-  "section_break_uto1",
-  "section_break_okx7r",
-  "criteria_table",
-  "avg_benchmark_1",
-  "avg_benchmark_2",
-  "avg_benchmark_3",
-  "avg_benchmark_4"
+  "section_break_cwth",
+  "criteria_table"
  ],
  "fields": [
   {
    "fieldname": "dir",
    "fieldtype": "HTML",
    "label": "dir",
-   "options": "<style>\np{\n    margin-top: 10px;\n  }\n</style>\n<p>\nAcademic Involvement bracket, evaluation criteria is guest lectures, a beyond syllabus activity.\nQuantities in bracket represent marks for the respective option. Total maximum marks possible is 113\n</p>"
+   "options": "<style>p{margin-top: 10px;}</style><p>For multiple certifications:Provide data of two best certificates (having maximum marks).Best of the two marks shall be considered as final marks</p><p>Quantities in bracket represent marks for the respective option. Total maximum marks possible is 150 for Engg</p>"
   },
   {
    "fieldname": "section_break_qe0e",
@@ -139,50 +132,22 @@
    "reqd": 1
   },
   {
-   "fieldname": "section_break_uto1",
-   "fieldtype": "Section Break"
-  },
-  {
-   "fieldname": "section_break_okx7r",
+   "fieldname": "section_break_cwth",
    "fieldtype": "Section Break"
   },
   {
    "fieldname": "criteria_table",
    "fieldtype": "Table",
    "label": "Criteria Table",
-   "options": "ai7"
-  },
-  {
-   "fieldname": "avg_benchmark_1",
-   "fieldtype": "Float",
-   "label": "AVG Benchmark 1 score",
-   "read_only": 1
-  },
-  {
-   "fieldname": "avg_benchmark_2",
-   "fieldtype": "Float",
-   "label": "AVG Benchmark 2 score",
-   "read_only": 1
-  },
-  {
-   "fieldname": "avg_benchmark_3",
-   "fieldtype": "Float",
-   "label": "AVG Benchmark 3 score",
-   "read_only": 1
-  },
-  {
-   "fieldname": "avg_benchmark_4",
-   "fieldtype": "Float",
-   "label": "AVG Benchmark 4 score",
-   "read_only": 1
+   "options": "ai5"
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2024-02-16 12:43:04.712713",
+ "modified": "2024-02-15 11:38:36.743335",
  "modified_by": "Administrator",
  "module": "bytenba",
- "name": "Contribution in learning resources development",
+ "name": "Course-lab outcome attainment",
  "owner": "Administrator",
  "permissions": [
   {
@@ -194,30 +159,6 @@
    "read": 1,
    "report": 1,
    "role": "System Manager",
-   "share": 1,
-   "write": 1
-  },
-  {
-   "create": 1,
-   "delete": 1,
-   "email": 1,
-   "export": 1,
-   "print": 1,
-   "read": 1,
-   "report": 1,
-   "role": "vit_emp",
-   "share": 1,
-   "write": 1
-  },
-  {
-   "create": 1,
-   "delete": 1,
-   "email": 1,
-   "export": 1,
-   "print": 1,
-   "read": 1,
-   "report": 1,
-   "role": "reviewer",
    "share": 1,
    "write": 1
   }

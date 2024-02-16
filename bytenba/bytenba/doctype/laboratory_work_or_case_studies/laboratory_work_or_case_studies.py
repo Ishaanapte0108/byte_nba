@@ -71,14 +71,3 @@ def compute_marks(self):
 			pas.append(round(pow))
 	
 	return sum(pas)
-
-
-
-
-
-
-		
-
-		
-
-					

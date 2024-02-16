@@ -22,13 +22,14 @@
    "fieldtype": "Float",
    "in_list_view": 1,
    "label": "Attainment",
+   "non_negative": 1,
    "reqd": 1
   }
  ],
  "index_web_pages_for_search": 1,
  "istable": 1,
  "links": [],
- "modified": "2023-09-29 21:04:51.514419",
+ "modified": "2024-02-14 15:44:33.570207",
  "modified_by": "Administrator",
  "module": "bytenba",
  "name": "ai5",

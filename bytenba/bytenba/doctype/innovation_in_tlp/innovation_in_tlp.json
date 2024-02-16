@@ -7,143 +7,239 @@
  "editable_grid": 1,
  "engine": "InnoDB",
  "field_order": [
+  "dir",
+  "section_break_qe0e",
+  "reviewer_score",
+  "column_break_hvfs",
+  "approved",
+  "section_break_ifut",
+  "self_appraisal_score",
+  "column_break_sbus",
+  "link_for_evidence",
+  "column_break_hpsk",
   "professor",
+  "designation",
+  "section_break_uihc",
   "academic_year",
+  "department",
+  "column_break_vbeg",
+  "semester",
+  "reviewer",
+  "section_break_uto1",
   "no_of_enrollments",
   "no_of_participants",
-  "no_of_activities",
-  "mappinng",
   "column_break_wzois",
-  "cluster_mentor_section",
+  "no_of_activities",
+  "mapping",
+  "section_break_yfsn",
   "quality_of_assignments",
-  "quality_of_tests",
   "quality_of_experiment",
+  "quality_of_tests",
+  "column_break_ikxa",
   "activities_done_outside_the_classroom",
   "activities_for_slow_learners",
-  "activities_for_advance_learners",
-  "obtained_marks",
-  "section_break_nzk0r",
-  "link_for_evidence",
-  "column_break_9mtx9",
-  "reviewer"
+  "activities_for_advance_learners"
  ],
  "fields": [
+  {
+   "fieldname": "dir",
+   "fieldtype": "HTML",
+   "label": "dir",
+   "options": "<p>\n  \n  <br><b>Academic Involvement 6</b><br>\n\n  <br>Maximum marks possible are <b>225</b>.<br>\n\n  <br>Self appraisal score is <b>150*(Product of applicable weightages)</b> <br>\n  \n  </p><p>Weightage for a option is indicated by the value in the parenthesis of the option selected</p>\n\n<p></p>\n"
+  },
+  {
+   "fieldname": "section_break_qe0e",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "reviewer_score",
+   "fieldtype": "Data",
+   "label": "Reviewer Score",
+   "permlevel": 1,
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_hvfs",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "depends_on": "approved",
+   "fieldname": "approved",
+   "fieldtype": "Check",
+   "label": "Approved",
+   "permlevel": 1
+  },
+  {
+   "fieldname": "section_break_ifut",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "self_appraisal_score",
+   "fieldtype": "Float",
+   "label": "Self Appraisal Score",
+   "permlevel": 1,
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_sbus",
+   "fieldtype": "Column Break"
+  },
+  {
+   "columns": 2,
+   "depends_on": "self_appraisal_score",
+   "fieldname": "link_for_evidence",
+   "fieldtype": "Attach",
+   "label": "Link for evidence"
+  },
+  {
+   "fieldname": "column_break_hpsk",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "professor",
+   "fieldtype": "Read Only",
+   "label": "Faculty",
+   "reqd": 1
+  },
+  {
+   "fieldname": "designation",
+   "fieldtype": "Data",
+   "label": "Designation",
+   "read_only": 1,
+   "reqd": 1
+  },
+  {
+   "fieldname": "section_break_uihc",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "academic_year",
+   "fieldtype": "Data",
+   "label": "Academic Year",
+   "reqd": 1
+  },
+  {
+   "fieldname": "department",
+   "fieldtype": "Link",
+   "label": "Department",
+   "options": "Department",
+   "read_only": 1,
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_vbeg",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "semester",
+   "fieldtype": "Select",
+   "label": "Semester",
+   "options": "Odd\nEven",
+   "reqd": 1
+  },
+  {
+   "fieldname": "reviewer",
+   "fieldtype": "Read Only",
+   "in_list_view": 1,
+   "label": "Reviewer",
+   "reqd": 1
+  },
+  {
+   "fieldname": "section_break_uto1",
+   "fieldtype": "Section Break"
+  },
   {
    "fieldname": "quality_of_assignments",
    "fieldtype": "Float",
    "label": "Quality of assignments",
+   "non_negative": 1,
    "reqd": 1
   },
   {
    "fieldname": "quality_of_tests",
    "fieldtype": "Float",
-   "label": "Quality of tests",
+   "label": "Quality of quizzes and tests",
+   "non_negative": 1,
    "reqd": 1
   },
   {
    "fieldname": "activities_done_outside_the_classroom",
    "fieldtype": "Float",
    "label": "Activities done outside the classroom",
+   "non_negative": 1,
    "reqd": 1
-  },
-  {
-   "fieldname": "mappinng",
-   "fieldtype": "Select",
-   "label": "Mappinng",
-   "options": "Strongly to PO(1.5)\nStrongly to CO(1)\nModerately to PO(1)\nModerately to CO(0.8)\nNeither mapping to PO or CO(0)",
-   "reqd": 1
-  },
-  {
-   "fieldname": "professor",
-   "fieldtype": "Read Only",
-   "label": "Professor"
-  },
-  {
-   "fieldname": "reviewer",
-   "fieldtype": "Link",
-   "label": "Reviewer",
-   "options": "Professors",
-   "reqd": 1
-  },
-  {
-   "fieldname": "obtained_marks",
-   "fieldtype": "Float",
-   "label": "Obtained marks",
-   "read_only": 1
   },
   {
    "fieldname": "column_break_wzois",
    "fieldtype": "Column Break"
   },
   {
-   "fieldname": "cluster_mentor_section",
-   "fieldtype": "HTML",
-   "label": "Dir2",
-   "options": "<p>Cluster mentor to give quality score between 0 and 1</p>",
-   "read_only": 1
-  },
-  {
-   "fieldname": "section_break_nzk0r",
-   "fieldtype": "Section Break"
-  },
-  {
-   "fieldname": "link_for_evidence",
-   "fieldtype": "Data",
-   "label": "Link for evidence",
-   "reqd": 1
-  },
-  {
-   "fieldname": "column_break_9mtx9",
-   "fieldtype": "Column Break"
-  },
-  {
-   "fieldname": "academic_year",
-   "fieldtype": "Data",
-   "in_list_view": 1,
-   "label": "Academic Year",
-   "reqd": 1
-  },
-  {
    "fieldname": "no_of_enrollments",
    "fieldtype": "Int",
+   "in_list_view": 1,
    "label": "No. of students enrolled for the course",
+   "non_negative": 1,
    "reqd": 1
   },
   {
    "fieldname": "no_of_participants",
    "fieldtype": "Int",
+   "in_list_view": 1,
    "label": "No. of students participating in all innovative TLP activities",
+   "non_negative": 1,
    "reqd": 1
   },
   {
    "default": "Assessment metric for internal marks",
    "fieldname": "no_of_activities",
    "fieldtype": "Int",
+   "in_list_view": 1,
    "label": "No. of activities considered for the term work",
+   "non_negative": 1,
    "reqd": 1
   },
   {
    "fieldname": "quality_of_experiment",
    "fieldtype": "Float",
    "label": "Quality of experiment conducted in a practical",
+   "non_negative": 1,
    "reqd": 1
   },
   {
    "fieldname": "activities_for_slow_learners",
    "fieldtype": "Float",
    "label": "Activities done for slow learners",
+   "non_negative": 1,
    "reqd": 1
   },
   {
    "fieldname": "activities_for_advance_learners",
    "fieldtype": "Float",
    "label": "Activities done for advance learners",
+   "non_negative": 1,
+   "reqd": 1
+  },
+  {
+   "fieldname": "section_break_yfsn",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "column_break_ikxa",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "mapping",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Mapping",
+   "options": "Strongly to PO(1.5)\nStrongly to CO(1)\nModerately to PO(1)\nModerately to CO(0.8)\nNeither mapping to PO or CO(0)",
    "reqd": 1
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2023-10-05 22:00:51.301461",
+ "modified": "2024-02-15 14:45:37.177012",
  "modified_by": "Administrator",
  "module": "bytenba",
  "name": "Innovation in TLP",
@@ -160,21 +256,10 @@
    "role": "System Manager",
    "share": 1,
    "write": 1
-  },
-  {
-   "create": 1,
-   "delete": 1,
-   "email": 1,
-   "export": 1,
-   "print": 1,
-   "read": 1,
-   "report": 1,
-   "role": "vit_emp",
-   "share": 1,
-   "write": 1
   }
  ],
  "sort_field": "modified",
  "sort_order": "DESC",
- "states": []
+ "states": [],
+ "title_field": "professor"
 }

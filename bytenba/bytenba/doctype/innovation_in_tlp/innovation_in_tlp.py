@@ -1,54 +1,28 @@
-# Copyright (c) 2023, byte_team and contributors
-# For license information, please see license.txt
-
 import frappe
 from frappe.model.document import Document
+import bytenba.form_validation as validation
 import re
 
-pattern = re.compile(r'^\d{4}-\d{4}$')
+Doctype = 'Innovation in TLP	'
+pattern_for_wtg = r'\((\s*(?:\d+\.\d+|\d+)\s*)\)'
 
 class InnovationinTLP(Document):
+
+	def autoname(self):
+		self.name = f'AI6_{self.owner}_{self.academic_year}_{self.semester}'
+
 	def before_save(self):
 		
-
-		"""get mark1"""
-		participants_int = self.no_of_participants
-		enrolled_int = self.no_of_enrollments
-		mark1 = participants_int / enrolled_int
-		
-		"""get mark2 cluster"""
-		no1 = self.quality_of_assignments
-		no2 = self.quality_of_tests
-		no3 = self.quality_of_experiment
-		no4 = self.activities_done_outside_the_classroom
-		no5 = self.activities_for_slow_learners
-		no6 = self.activities_for_advance_learners
-		sum1 = no1+no2+no3+no4+no5
-		mark2 = sum1 / 6
-		
-
-		"""get mark3 mapping"""
-		map_out = self.mappinng
-		mapdict = {'Strongly to PO(1.5)': 1.5, 'Moderately to PO(1)': 1, 'Moderately to CO(0.8)': 0.8, 'Neither mapping to PO nor CO (0)': 0}
-		mark3 = mapdict.get(map_out, 0)
-		
-		"""get mark4 assessment"""
-		act_int = self.no_of_activities
-		mark4 = act_int * 0.25
-		
-
-		product_of_wtg = mark1*mark2*mark3*mark4
-		marks = product_of_wtg*150
-		frappe.msgprint(f'marks {marks}')
-
-		self.obtained_marks = marks
+		self.self_appraisal_score = compute_marks(self)
 
 	def autoname(self):
 		self.name = f'AI6_{self.academic_year}_{self.professor}'
 
 	def validate(self):
+		
+		validation.standard_validation(self)
 
-		# no of participants
+		# no of participants		
 		enrolled = self.no_of_enrollments
 		participants=self.no_of_participants
 		if participants > enrolled:
@@ -71,9 +45,36 @@ class InnovationinTLP(Document):
 		if activities < 4:
 			frappe.throw('Minimum nunmber of activities considered for term work should be 4')
 
-		#academic yr
-		academic_yr_str = self.academic_year
-		if not re.match(pattern, academic_yr_str):
-			frappe.throw('Academic year must be of the form like 2022-2023')
+
+def compute_marks(self):
+
+		"""get mark1"""
+		participants_int = self.no_of_participants
+		enrolled_int = self.no_of_enrollments
+		mark1 = participants_int / enrolled_int
+
+		"""get mapping"""
+		match = re.search(pattern_for_wtg, self.mapping)
+		if match:
+			mark4 = float(match.group(1).strip())
+		else:
+			frappe.throw('Error Fetching Field Weightages')
 
 
+		"""get number of activities"""
+		mark3 = self.no_of_activities*0.25
+		
+		"""get mark2 cluster"""
+		no1 = self.quality_of_assignments
+		no2 = self.quality_of_tests
+		no3 = self.quality_of_experiment
+		no4 = self.activities_done_outside_the_classroom
+		no5 = self.activities_for_slow_learners
+		no6 = self.activities_for_advance_learners
+		sum1 = no1+no2+no3+no4+no5+no6
+		mark2 = round(sum1/6)		
+
+		product_of_wtg = mark1*mark2*mark3*mark4
+		marks = round(product_of_wtg*150)
+
+		return marks	
