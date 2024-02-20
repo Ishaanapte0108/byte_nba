@@ -1,76 +1,56 @@
-# Copyright (c) 2023, byte_team and contributors
-# For license information, please see license.txt
-
 import frappe
 from frappe.model.document import Document
+import bytenba.form_validation as validation
 import re
 
-Doctype = 'BE Projects'
+Doctype = 'Mini project as a subject head'
 pattern_for_wtg = r'\((\s*(?:\d+\.\d+|\d+)\s*)\)'
-pattern_for_ay = re.compile(r'^\d{4}-\d{4}$')
 
-class BEProjects(Document):	
+class Miniprojectasasubjecthead(Document):
 	
+	"""method to autoname your document"""
 	def autoname(self):
-		self.name = f'AI8Engg_{self.academic_year}_{self.semester}_{self.professor}'
+		self.name = f'AI8_{self.owner}_{self.academic_year}_{self.semester}'
 	
 	def before_save(self):
-		self_appraisal_score = compute_marks(self)
-		self.self_appraisal_score = self_appraisal_score
+		self.self_appraisal_score = compute_marks(self)
 
 	def validate(self):
-		#validate academic year str
-		academic_yr_str = self.academic_year
-		if re.match(pattern_for_ay, academic_yr_str):
-			years = academic_yr_str.split("-")
-			if int(years[1]) != int(years[0]) + 1:
-				frappe.throw('Academic year entered incorrectly')
-		else:
-			frappe.throw('Academic year must be of the form like 2022-2023')
+		validation.standard_validation(self)
 
-		#validate if same record exists in database
-		existing_record = frappe.db.exists('BE Projects', {'name': self.name})
-		#check if it is not the document currently begin worked upon
-		if existing_record and existing_record != self.name:
-			frappe.throw('There already exists such a record in the database')
 
 def compute_marks(self):
-
-	'''type of guide'''
-	match = re.search(pattern_for_wtg, self.type_of_guide)
+	
+	match = re.search(pattern_for_wtg, self.col1)
 	if match:
 		val1 = float(match.group(1).strip())
 	else:
 		frappe.throw('Error Fetching Field Weightages')
 
-	"""organization"""
-	match = re.search(pattern_for_wtg, self.type_of_organization)
+	match = re.search(pattern_for_wtg, self.col2)
 	if match:
 		val2 = float(match.group(1).strip())
 	else:
-		frappe.throw('Error Fetching Field Weightages')	
+		frappe.throw('Error Fetching Field Weightages')
 
-	"""project"""
-	match = re.search(pattern_for_wtg, self.type_of_project)
+	match = re.search(pattern_for_wtg, self.col3)
 	if match:
 		val3 = float(match.group(1).strip())
 	else:
-		frappe.throw('Error Fetching Field Weightages')	
+		frappe.throw('Error Fetching Field Weightages')
 
-
-	"""publications"""
-	match = re.search(pattern_for_wtg, self.publications)
+	match = re.search(pattern_for_wtg, self.col4)
 	if match:
 		val4 = float(match.group(1).strip())
 	else:
 		frappe.throw('Error Fetching Field Weightages')
 
-	"""mapping"""
-	match = re.search(pattern_for_wtg, self.mapping)
+	match = re.search(pattern_for_wtg, self.col5)
 	if match:
 		val5 = float(match.group(1).strip())
 	else:
 		frappe.throw('Error Fetching Field Weightages')
-
+		
 	product_of_wts = val1*val2*val3*val4*val5
-	return product_of_wts*50
+	
+	return round(product_of_wts*50)

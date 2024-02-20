@@ -1,25 +1,188 @@
 {
  "actions": [],
  "allow_rename": 1,
- "creation": "2023-12-16 22:03:07.550659",
- "default_view": "List",
+ "creation": "2024-02-16 13:00:34.406539",
  "doctype": "DocType",
- "editable_grid": 1,
  "engine": "InnoDB",
  "field_order": [
-  "dummy"
+  "section_break_4dwp",
+  "html_xhqd",
+  "section_break_qe0e",
+  "reviewer_score",
+  "column_break_hvfs",
+  "approved",
+  "section_break_ifut",
+  "self_appraisal_score",
+  "column_break_sbus",
+  "link_for_evidence",
+  "column_break_hpsk",
+  "professor",
+  "designation",
+  "section_break_uihc",
+  "academic_year",
+  "department",
+  "column_break_vbeg",
+  "semester",
+  "reviewer",
+  "section_break_azxy",
+  "col1",
+  "col2",
+  "col3",
+  "column_break_rjyd",
+  "col4",
+  "col5"
  ],
  "fields": [
   {
-   "fieldname": "dummy",
+   "fieldname": "section_break_4dwp",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "html_xhqd",
    "fieldtype": "HTML",
-   "label": "Dummy",
-   "options": "<p>Test Doc</p>"
+   "label": "dir",
+   "options": "<p>\n  <br><b>Academic Involvement 8</b><br>\n\n  <br>Maximum marks possible are <b>295</b>.<br>\n  \n  </p><p>Self appraisal score is calculated as <b>PRODUCT(Applicable Weightages)*50</b></p>\n\n  <p></p><p>Quantities in bracket represent marks for the respective option</p>\n\n<p></p>"
+  },
+  {
+   "fieldname": "section_break_qe0e",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "reviewer_score",
+   "fieldtype": "Data",
+   "label": "Reviewer Score",
+   "permlevel": 1,
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_hvfs",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "depends_on": "approved",
+   "fieldname": "approved",
+   "fieldtype": "Check",
+   "label": "Approved",
+   "permlevel": 1
+  },
+  {
+   "fieldname": "section_break_ifut",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "self_appraisal_score",
+   "fieldtype": "Float",
+   "label": "Self Appraisal Score",
+   "permlevel": 1,
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_sbus",
+   "fieldtype": "Column Break"
+  },
+  {
+   "columns": 2,
+   "depends_on": "self_appraisal_score",
+   "fieldname": "link_for_evidence",
+   "fieldtype": "Attach",
+   "label": "Link for evidence"
+  },
+  {
+   "fieldname": "column_break_hpsk",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "professor",
+   "fieldtype": "Read Only",
+   "label": "Faculty",
+   "reqd": 1
+  },
+  {
+   "fieldname": "designation",
+   "fieldtype": "Data",
+   "label": "Designation",
+   "read_only": 1,
+   "reqd": 1
+  },
+  {
+   "fieldname": "section_break_uihc",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "academic_year",
+   "fieldtype": "Data",
+   "label": "Academic Year",
+   "reqd": 1
+  },
+  {
+   "fieldname": "department",
+   "fieldtype": "Link",
+   "label": "Department",
+   "options": "Department",
+   "read_only": 1,
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_vbeg",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "semester",
+   "fieldtype": "Select",
+   "label": "Semester",
+   "options": "Odd\nEven",
+   "reqd": 1
+  },
+  {
+   "fieldname": "reviewer",
+   "fieldtype": "Read Only",
+   "in_list_view": 1,
+   "label": "Reviewer",
+   "reqd": 1
+  },
+  {
+   "fieldname": "section_break_azxy",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "col1",
+   "fieldtype": "Select",
+   "label": "Type of guide",
+   "options": "Industry expert as Co-guide (1.5)\nFaculty guided only (1)"
+  },
+  {
+   "fieldname": "col2",
+   "fieldtype": "Select",
+   "label": "Type of organisation of industry co-guide",
+   "options": "MNC (1.5)\nNational (1.3)\nSMEs (1.1)\nNone (1)"
+  },
+  {
+   "fieldname": "col3",
+   "fieldtype": "Select",
+   "label": "Type of project",
+   "options": "Functional Project (1.0)\nNon functional Project (0.5)"
+  },
+  {
+   "fieldname": "column_break_rjyd",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "col4",
+   "fieldtype": "Select",
+   "label": "Publications",
+   "options": "Peer Reviewed Journal (1.75)\nInternational Conference (1.5)\nUGC approved Journal (1.5)\nNational Conference (1.25)\nNone (1)"
+  },
+  {
+   "fieldname": "col5",
+   "fieldtype": "Select",
+   "label": "Mapping",
+   "options": "Strongly to PO (1.5)\nStrongly to CO (1)\nModerately to PO (1)\nModerately to CO (0.8)\nNeither mapping to PO or CO (0)"
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2023-12-16 22:03:07.550659",
+ "modified": "2024-02-16 14:07:08.609447",
  "modified_by": "Administrator",
  "module": "bytenba",
  "name": "Mini project as a subject head",
@@ -40,5 +203,6 @@
  ],
  "sort_field": "modified",
  "sort_order": "DESC",
- "states": []
+ "states": [],
+ "title_field": "professor"
 }

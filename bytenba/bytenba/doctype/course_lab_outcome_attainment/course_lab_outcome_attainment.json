@@ -1,10 +1,8 @@
 {
  "actions": [],
  "allow_rename": 1,
- "creation": "2023-10-21 22:24:36.273735",
- "default_view": "List",
+ "creation": "2024-02-14 15:07:51.044239",
  "doctype": "DocType",
- "editable_grid": 1,
  "engine": "InnoDB",
  "field_order": [
   "dir",
@@ -25,25 +23,15 @@
   "column_break_vbeg",
   "semester",
   "reviewer",
-  "section_break_abwck",
-  "number_of_projects_guided",
-  "number_of_industry_projects",
-  "number_of_live_projects",
-  "participation_in_competitions",
-  "number_of_groups_participated",
-  "column_break_9adka",
-  "publications",
-  "awards",
-  "number_of_awards",
-  "funding_required",
-  "quality_of_university"
+  "section_break_cwth",
+  "criteria_table"
  ],
  "fields": [
   {
    "fieldname": "dir",
    "fieldtype": "HTML",
    "label": "dir",
-   "options": "Summer internships and projects"
+   "options": "<style>p{margin-top: 10px;}</style><p>For multiple certifications:Provide data of two best certificates (having maximum marks).Best of the two marks shall be considered as final marks</p><p>Quantities in bracket represent marks for the respective option. Total maximum marks possible is 150 for Engg</p>"
   },
   {
    "fieldname": "section_break_qe0e",
@@ -144,89 +132,22 @@
    "reqd": 1
   },
   {
-   "fieldname": "section_break_abwck",
+   "fieldname": "section_break_cwth",
    "fieldtype": "Section Break"
   },
   {
-   "fieldname": "number_of_projects_guided",
-   "fieldtype": "Select",
-   "in_list_view": 1,
-   "label": "Number of projects guided",
-   "options": "Three or more (1)\nTwo or more(1.2)\nOne (0.6)\nNone (0)",
-   "reqd": 1
-  },
-  {
-   "fieldname": "number_of_industry_projects",
-   "fieldtype": "Select",
-   "in_list_view": 1,
-   "label": "Number of industry projects",
-   "options": "Two or more(1.2)\nTwo (1)\nOne(0.8)\nNone(0.5)",
-   "reqd": 1
-  },
-  {
-   "fieldname": "number_of_live_projects",
-   "fieldtype": "Select",
-   "in_list_view": 1,
-   "label": "Number of live projects",
-   "options": "Three of more (1.2)\nTwo (1)\nOne (0.8)\nNone(0.2)",
-   "reqd": 1
-  },
-  {
-   "fieldname": "participation_in_competitions",
-   "fieldtype": "Select",
-   "label": "Participation in competitions",
-   "options": "International (1.5)\nNational (1.3)\nState college (1.2)\nIntercollege (1.1)\nNone (1)",
-   "reqd": 1
-  },
-  {
-   "fieldname": "number_of_groups_participated",
-   "fieldtype": "Int",
-   "label": "Number of groups participated in competitions above"
-  },
-  {
-   "fieldname": "column_break_9adka",
-   "fieldtype": "Column Break"
-  },
-  {
-   "fieldname": "publications",
-   "fieldtype": "Select",
-   "label": "Publications",
-   "options": "Peer Reviewed Journal (1.75)\nInternational Conference (1.5)\nUGC Approved Journal (1.5)\nNational Conference (1.25)\nNone (0.5)",
-   "reqd": 1
-  },
-  {
-   "fieldname": "quality_of_university",
-   "fieldtype": "Select",
-   "label": "Quality of University",
-   "options": "Accredited (1.0)\nNon-Accredited (0.8)",
-   "reqd": 1
-  },
-  {
-   "fieldname": "awards",
-   "fieldtype": "Select",
-   "label": "Awards",
-   "options": "International (2.0)\nNational (1.8)\nState Level (1.6)\nIntercollege (1.4)\nNone (1.0)",
-   "reqd": 1
-  },
-  {
-   "fieldname": "number_of_awards",
-   "fieldtype": "Int",
-   "label": "Number of awards received for above field"
-  },
-  {
-   "fieldname": "funding_required",
-   "fieldtype": "Select",
-   "label": "Funding required",
-   "options": "Yes (1.75)\nNo (1)",
-   "reqd": 1
+   "fieldname": "criteria_table",
+   "fieldtype": "Table",
+   "label": "Criteria Table",
+   "options": "ai5"
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2024-02-16 15:27:52.889041",
+ "modified": "2024-02-15 11:38:36.743335",
  "modified_by": "Administrator",
  "module": "bytenba",
- "name": "BE Projects",
+ "name": "Course-lab outcome attainment",
  "owner": "Administrator",
  "permissions": [
   {
@@ -244,5 +165,6 @@
  ],
  "sort_field": "modified",
  "sort_order": "DESC",
- "states": []
+ "states": [],
+ "title_field": "professor"
 }

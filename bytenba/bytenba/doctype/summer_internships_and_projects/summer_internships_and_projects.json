@@ -1,13 +1,13 @@
 {
  "actions": [],
  "allow_rename": 1,
- "creation": "2023-10-21 22:24:36.273735",
+ "creation": "2024-02-16 15:25:57.299592",
  "default_view": "List",
  "doctype": "DocType",
  "editable_grid": 1,
  "engine": "InnoDB",
  "field_order": [
-  "dir",
+  "html_tqof",
   "section_break_qe0e",
   "reviewer_score",
   "column_break_hvfs",
@@ -27,24 +27,13 @@
   "reviewer",
   "section_break_abwck",
   "number_of_projects_guided",
-  "number_of_industry_projects",
-  "number_of_live_projects",
   "participation_in_competitions",
-  "number_of_groups_participated",
-  "column_break_9adka",
   "publications",
+  "column_break_9adka",
   "awards",
-  "number_of_awards",
-  "funding_required",
-  "quality_of_university"
+  "number_of_awards"
  ],
  "fields": [
-  {
-   "fieldname": "dir",
-   "fieldtype": "HTML",
-   "label": "dir",
-   "options": "Summer internships and projects"
-  },
   {
    "fieldname": "section_break_qe0e",
    "fieldtype": "Section Break"
@@ -152,23 +141,7 @@
    "fieldtype": "Select",
    "in_list_view": 1,
    "label": "Number of projects guided",
-   "options": "Three or more (1)\nTwo or more(1.2)\nOne (0.6)\nNone (0)",
-   "reqd": 1
-  },
-  {
-   "fieldname": "number_of_industry_projects",
-   "fieldtype": "Select",
-   "in_list_view": 1,
-   "label": "Number of industry projects",
-   "options": "Two or more(1.2)\nTwo (1)\nOne(0.8)\nNone(0.5)",
-   "reqd": 1
-  },
-  {
-   "fieldname": "number_of_live_projects",
-   "fieldtype": "Select",
-   "in_list_view": 1,
-   "label": "Number of live projects",
-   "options": "Three of more (1.2)\nTwo (1)\nOne (0.8)\nNone(0.2)",
+   "options": "One (1)\nLess than 10 (0.8)",
    "reqd": 1
   },
   {
@@ -179,11 +152,6 @@
    "reqd": 1
   },
   {
-   "fieldname": "number_of_groups_participated",
-   "fieldtype": "Int",
-   "label": "Number of groups participated in competitions above"
-  },
-  {
    "fieldname": "column_break_9adka",
    "fieldtype": "Column Break"
   },
@@ -191,14 +159,7 @@
    "fieldname": "publications",
    "fieldtype": "Select",
    "label": "Publications",
-   "options": "Peer Reviewed Journal (1.75)\nInternational Conference (1.5)\nUGC Approved Journal (1.5)\nNational Conference (1.25)\nNone (0.5)",
-   "reqd": 1
-  },
-  {
-   "fieldname": "quality_of_university",
-   "fieldtype": "Select",
-   "label": "Quality of University",
-   "options": "Accredited (1.0)\nNon-Accredited (0.8)",
+   "options": "Peer Reviewed Journal (1.75)\nInternational Conference (1.5)\nUGC Approved Journal (1.5)\nNational Conference (1.25)\nScholarly Term paper (1)\nNone (0.5)",
    "reqd": 1
   },
   {
@@ -214,19 +175,17 @@
    "label": "Number of awards received for above field"
   },
   {
-   "fieldname": "funding_required",
-   "fieldtype": "Select",
-   "label": "Funding required",
-   "options": "Yes (1.75)\nNo (1)",
-   "reqd": 1
+   "fieldname": "html_tqof",
+   "fieldtype": "HTML",
+   "options": "<p>\n  <br><b>Academic Involvement 9 MMS</b><br>\n\n  <br>Maximum marks possible are <b>525</b>.<br>\n  \n  </p><p>Self appraisal score is calculated as <b>PRODUCT(Applicable Weightages)*100</b></p>\n\n  <p></p><p>Quantities in bracket represent marks for the respective option</p>\n\n<p></p>"
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2024-02-16 15:27:52.889041",
+ "modified": "2024-02-16 15:38:57.788726",
  "modified_by": "Administrator",
  "module": "bytenba",
- "name": "BE Projects",
+ "name": "Summer internships and projects",
  "owner": "Administrator",
  "permissions": [
   {

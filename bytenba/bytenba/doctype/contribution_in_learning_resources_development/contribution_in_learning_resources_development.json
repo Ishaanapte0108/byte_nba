@@ -7,124 +7,179 @@
  "editable_grid": 1,
  "engine": "InnoDB",
  "field_order": [
+  "dir",
+  "section_break_qe0e",
+  "reviewer_score",
+  "column_break_hvfs",
+  "approved",
+  "section_break_ifut",
+  "self_appraisal_score",
+  "column_break_sbus",
+  "link_for_evidence",
+  "column_break_hpsk",
   "professor",
-  "column_break_azomb",
+  "designation",
+  "section_break_uihc",
   "academic_year",
-  "section_break_c2agv",
-  "maximum_marks",
+  "department",
+  "column_break_vbeg",
+  "semester",
+  "reviewer",
+  "section_break_uto1",
   "section_break_okx7r",
-  "criteria_1",
-  "as_section",
-  "criteria_2",
-  "as2",
-  "b2_column",
-  "criteria_3",
-  "as3",
-  "criteria_4",
-  "as4",
-  "obtained_marks",
-  "marks"
+  "criteria_table",
+  "avg_benchmark_1",
+  "avg_benchmark_2",
+  "avg_benchmark_3",
+  "avg_benchmark_4"
  ],
  "fields": [
   {
-   "fieldname": "maximum_marks",
+   "fieldname": "dir",
    "fieldtype": "HTML",
-   "label": "Maximum marks",
-   "options": "<p> <b> Maximum marks 100 </b> </p>"
+   "label": "dir",
+   "options": "<style>\np{\n    margin-top: 10px;\n  }\n</style>\n<p>\nAcademic Involvement bracket, evaluation criteria is guest lectures, a beyond syllabus activity.\nQuantities in bracket represent marks for the respective option. Total maximum marks possible is 113\n</p>"
   },
   {
-   "fieldname": "criteria_1",
+   "fieldname": "section_break_qe0e",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "reviewer_score",
+   "fieldtype": "Data",
+   "label": "Reviewer Score",
+   "permlevel": 1,
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_hvfs",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "depends_on": "approved",
+   "fieldname": "approved",
+   "fieldtype": "Check",
+   "label": "Approved",
+   "permlevel": 1
+  },
+  {
+   "fieldname": "section_break_ifut",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "self_appraisal_score",
    "fieldtype": "Float",
-   "in_list_view": 1,
-   "label": "Criteria 1",
-   "options": "<p> Between 0 to 1</p>",
+   "label": "Self Appraisal Score",
+   "permlevel": 1,
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_sbus",
+   "fieldtype": "Column Break"
+  },
+  {
+   "columns": 2,
+   "depends_on": "self_appraisal_score",
+   "fieldname": "link_for_evidence",
+   "fieldtype": "Attach",
+   "label": "Link for evidence"
+  },
+  {
+   "fieldname": "column_break_hpsk",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "professor",
+   "fieldtype": "Read Only",
+   "label": "Faculty",
    "reqd": 1
   },
   {
-   "fieldname": "as_section",
-   "fieldtype": "HTML",
-   "label": "As",
-   "options": "<p>Theory notes /Questions for  each chapter of the syllabus &amp; upload on V-Refer <br> ( Min 10% enhancement in the existing learning resources) <br> <b> 40 marks</b></p>"
-  },
-  {
-   "fieldname": "criteria_2",
-   "fieldtype": "Float",
-   "label": "Criteria 2",
+   "fieldname": "designation",
+   "fieldtype": "Data",
+   "label": "Designation",
+   "read_only": 1,
    "reqd": 1
   },
   {
-   "fieldname": "as2",
-   "fieldtype": "HTML",
-   "label": "As2",
-   "options": "<p> E-book/ including digital content<br> (Cluster mentor to give quality factor) <br><b> 30 marks</b> </p>"
-  },
-  {
-   "fieldname": "criteria_3",
-   "fieldtype": "Float",
-   "label": "Criteria 3",
-   "reqd": 1
-  },
-  {
-   "fieldname": "as3",
-   "fieldtype": "HTML",
-   "label": "As3.",
-   "options": "<p> Resource book/ Lab manual<br> (Cluster mentor to give quality factor)<br> <b> 20 marks</b> <br> </p>"
-  },
-  {
-   "fieldname": "criteria_4",
-   "fieldtype": "Float",
-   "label": "Criteria 4",
-   "reqd": 1
-  },
-  {
-   "fieldname": "as4",
-   "fieldtype": "HTML",
-   "label": "As4",
-   "options": "<p> Preparation of AAP validated by cluster mentor <br>(Cluster mentor to give quality factor) <br><b> 10 marks </b> </p> "
-  },
-  {
-   "bold": 1,
-   "fieldname": "obtained_marks",
-   "fieldtype": "Float",
-   "label": "Obtained marks "
-  },
-  {
-   "fieldname": "column_break_azomb",
+   "fieldname": "section_break_uihc",
    "fieldtype": "Column Break"
   },
   {
    "fieldname": "academic_year",
    "fieldtype": "Data",
-   "label": "Academic year ",
+   "label": "Academic Year",
    "reqd": 1
   },
   {
-   "fieldname": "section_break_c2agv",
-   "fieldtype": "Section Break"
+   "fieldname": "department",
+   "fieldtype": "Link",
+   "label": "Department",
+   "options": "Department",
+   "read_only": 1,
+   "reqd": 1
   },
   {
-   "fieldname": "b2_column",
+   "fieldname": "column_break_vbeg",
    "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "semester",
+   "fieldtype": "Select",
+   "label": "Semester",
+   "options": "Odd\nEven",
+   "reqd": 1
+  },
+  {
+   "fieldname": "reviewer",
+   "fieldtype": "Read Only",
+   "in_list_view": 1,
+   "label": "Reviewer",
+   "reqd": 1
+  },
+  {
+   "fieldname": "section_break_uto1",
+   "fieldtype": "Section Break"
   },
   {
    "fieldname": "section_break_okx7r",
    "fieldtype": "Section Break"
   },
   {
-   "fieldname": "professor",
-   "fieldtype": "Read Only",
-   "label": "Professor"
+   "fieldname": "criteria_table",
+   "fieldtype": "Table",
+   "label": "Criteria Table",
+   "options": "ai7"
   },
   {
-   "fieldname": "marks",
-   "fieldtype": "HTML",
-   "label": "Marks",
-   "options": "<p> (Criteria 1 * 40 + Criteria 2 * 30 + Criteria 3 * 20 + Criteria 4 * 10 )</p>"
+   "fieldname": "avg_benchmark_1",
+   "fieldtype": "Float",
+   "label": "AVG Benchmark 1 score",
+   "read_only": 1
+  },
+  {
+   "fieldname": "avg_benchmark_2",
+   "fieldtype": "Float",
+   "label": "AVG Benchmark 2 score",
+   "read_only": 1
+  },
+  {
+   "fieldname": "avg_benchmark_3",
+   "fieldtype": "Float",
+   "label": "AVG Benchmark 3 score",
+   "read_only": 1
+  },
+  {
+   "fieldname": "avg_benchmark_4",
+   "fieldtype": "Float",
+   "label": "AVG Benchmark 4 score",
+   "read_only": 1
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2023-10-18 19:27:25.136931",
+ "modified": "2024-02-16 12:43:04.712713",
  "modified_by": "Administrator",
  "module": "bytenba",
  "name": "Contribution in learning resources development",
@@ -141,9 +196,34 @@
    "role": "System Manager",
    "share": 1,
    "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "vit_emp",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "reviewer",
+   "share": 1,
+   "write": 1
   }
  ],
  "sort_field": "modified",
  "sort_order": "DESC",
- "states": []
+ "states": [],
+ "title_field": "professor"
 }
