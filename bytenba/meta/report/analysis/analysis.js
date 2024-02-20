@@ -47,8 +47,8 @@ frappe.query_reports["Analysis"] = {
 	"formatter": function(value, row, column, data, default_formatter) {
 		
 		value = default_formatter(value, row, column, data);
-
-    if (column['id'] === "AI 1" && data['Designation']=== "Professor") {
+		
+    if (column['id'] === "Courses taught" && data['Designation']=== "Professor") {
         
         if (value < 100) {
             value = '<b style="color: red;">' + value + '</b>';
@@ -57,7 +57,6 @@ frappe.query_reports["Analysis"] = {
 					value = '<b style="color: green;">' + value + '</b>';
 				}
     }
-
     return value;
 	},
 };

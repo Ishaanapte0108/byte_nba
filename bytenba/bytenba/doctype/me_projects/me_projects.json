@@ -7,13 +7,25 @@
  "editable_grid": 1,
  "engine": "InnoDB",
  "field_order": [
-  "directions",
-  "section_break_m3ki",
+  "dir",
+  "section_break_qe0e",
+  "reviewer_score",
+  "column_break_hvfs",
+  "approved",
+  "section_break_ifut",
+  "self_appraisal_score",
+  "column_break_sbus",
+  "link_for_evidence",
+  "column_break_hpsk",
   "professor",
-  "column_break_rtnl",
+  "designation",
+  "section_break_uihc",
   "academic_year",
-  "column_break_lyqq",
+  "department",
+  "column_break_vbeg",
   "semester",
+  "reviewer",
+  "section_break_uto1",
   "section_break_qqgq",
   "number_of_projects_guided",
   "industry_projects",
@@ -28,152 +40,41 @@
   "num_ind_prj_guided",
   "num_live_prjs",
   "num_parts_grps",
-  "num_awards",
-  "section_break_0ueo",
-  "self_appraisal_score",
-  "reviewer",
-  "approved"
+  "num_awards"
  ],
  "fields": [
   {
-   "fieldname": "industry_projects",
-   "fieldtype": "Select",
-   "label": "Industry Projects",
-   "options": "Two or More (1.2)\nOne (1)\nNone (0.5)",
-   "permlevel": 1
-  },
-  {
-   "fieldname": "live_projects",
-   "fieldtype": "Select",
-   "label": "Live Projects",
-   "options": "Two or More (1.2)\nOne (1)\nNone (0.2)",
-   "permlevel": 1
-  },
-  {
-   "fieldname": "participation_in_competitions",
-   "fieldtype": "Select",
-   "label": "Participation in competitions",
-   "options": "International (1.5)\nNational (1.3)\nState College (1.2)\nIntercollegiate (1.1)",
-   "permlevel": 1
-  },
-  {
-   "fieldname": "publications",
-   "fieldtype": "Select",
-   "label": "Publications",
-   "options": "Peer reviewed Journal (1.75)\nInternational Conference (1.5)\nUGC approved Journal (1.5)\nNational Conference (1.25)\nNone (0.5)",
-   "permlevel": 1
-  },
-  {
-   "fieldname": "awards",
-   "fieldtype": "Select",
-   "label": "Awards",
-   "options": "International (2.0)\nNational (1.8)\nState Level: (1.6)\nIntercollegiate (City level) (1.4)\nNone (1)",
-   "permlevel": 1
-  },
-  {
-   "fieldname": "funding_required",
-   "fieldtype": "Select",
-   "label": "Funding Required",
-   "options": "Yes (1.75)\nNo (1)",
-   "permlevel": 1
-  },
-  {
-   "fieldname": "quality_of_university",
-   "fieldtype": "Select",
-   "label": "Quality of University",
-   "options": "Accredited (1)\nNon-Accredited (0.8)",
-   "permlevel": 1
-  },
-  {
-   "fieldname": "directions",
+   "fieldname": "dir",
    "fieldtype": "HTML",
-   "label": "directions",
-   "options": "<style>\np{\n    margin-top: 10px;\n  }\n</style>\n<p>Maximum marks possible for this criterion are <b>1323</b>. Marks in the bracket represent weightages for the given option</p>",
-   "permlevel": 1
+   "label": "dir",
+   "options": "<style>\np{\n    margin-top: 10px;\n  }\n</style>\n<p>\nAcademic Involvement bracket, evaluation criteria is guest lectures, a beyond syllabus activity.\nQuantities in bracket represent marks for the respective option. Total maximum marks possible is 113\n</p>"
   },
   {
-   "fieldname": "academic_year",
+   "fieldname": "section_break_qe0e",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "reviewer_score",
    "fieldtype": "Data",
-   "label": "Academic Year",
-   "permlevel": 1
+   "label": "Reviewer Score",
+   "permlevel": 1,
+   "read_only": 1
   },
   {
-   "fieldname": "semester",
-   "fieldtype": "Select",
-   "label": "Semester",
-   "options": "Odd\nEven",
-   "permlevel": 1
-  },
-  {
-   "fieldname": "section_break_m3ki",
-   "fieldtype": "Section Break",
-   "permlevel": 1
-  },
-  {
-   "fieldname": "professor",
-   "fieldtype": "Read Only",
-   "label": "Professor",
-   "permlevel": 1
-  },
-  {
-   "fieldname": "reviewer",
-   "fieldtype": "Read Only",
-   "label": "Reviewer",
-   "permlevel": 1
+   "fieldname": "column_break_hvfs",
+   "fieldtype": "Column Break"
   },
   {
    "default": "0",
+   "depends_on": "approved",
    "fieldname": "approved",
    "fieldtype": "Check",
    "label": "Approved",
-   "permlevel": 2
-  },
-  {
-   "fieldname": "number_of_projects_guided",
-   "fieldtype": "Select",
-   "label": "Number of Projects Guided",
-   "options": "Two or More (1)\nOne (0.8)\nNone (0)",
    "permlevel": 1
   },
   {
-   "fieldname": "column_break_6uqt",
-   "fieldtype": "Column Break",
-   "permlevel": 1
-  },
-  {
-   "fieldname": "num_prj_guided",
-   "fieldtype": "Int",
-   "label": "Enter exact number of projects guided",
-   "permlevel": 1
-  },
-  {
-   "fieldname": "num_ind_prj_guided",
-   "fieldtype": "Int",
-   "label": "Enter exact number of industry projects guided",
-   "permlevel": 1
-  },
-  {
-   "fieldname": "num_live_prjs",
-   "fieldtype": "Int",
-   "label": "Enter exact number of live projects",
-   "permlevel": 1
-  },
-  {
-   "fieldname": "num_parts_grps",
-   "fieldtype": "Int",
-   "label": "Mention number of participating groups",
-   "permlevel": 1
-  },
-  {
-   "fieldname": "num_awards",
-   "fieldtype": "Int",
-   "label": "Mention Number of Awards",
-   "permlevel": 1
-  },
-  {
-   "fieldname": "section_break_0ueo",
-   "fieldtype": "Column Break",
-   "permlevel": 1
+   "fieldname": "section_break_ifut",
+   "fieldtype": "Section Break"
   },
   {
    "fieldname": "self_appraisal_score",
@@ -183,24 +84,160 @@
    "read_only": 1
   },
   {
+   "fieldname": "column_break_sbus",
+   "fieldtype": "Column Break"
+  },
+  {
+   "columns": 2,
+   "depends_on": "self_appraisal_score",
+   "fieldname": "link_for_evidence",
+   "fieldtype": "Attach",
+   "label": "Link for evidence"
+  },
+  {
+   "fieldname": "column_break_hpsk",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "professor",
+   "fieldtype": "Read Only",
+   "label": "Faculty",
+   "reqd": 1
+  },
+  {
+   "fieldname": "designation",
+   "fieldtype": "Data",
+   "label": "Designation",
+   "read_only": 1,
+   "reqd": 1
+  },
+  {
+   "fieldname": "section_break_uihc",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "academic_year",
+   "fieldtype": "Data",
+   "label": "Academic Year",
+   "reqd": 1
+  },
+  {
+   "fieldname": "department",
+   "fieldtype": "Link",
+   "label": "Department",
+   "options": "Department",
+   "read_only": 1,
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_vbeg",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "semester",
+   "fieldtype": "Select",
+   "label": "Semester",
+   "options": "Odd\nEven",
+   "reqd": 1
+  },
+  {
+   "fieldname": "reviewer",
+   "fieldtype": "Read Only",
+   "in_list_view": 1,
+   "label": "Reviewer",
+   "reqd": 1
+  },
+  {
+   "fieldname": "section_break_uto1",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "industry_projects",
+   "fieldtype": "Select",
+   "label": "Industry Projects",
+   "options": "Two or More (1.2)\nOne (1)\nNone (0.5)"
+  },
+  {
+   "fieldname": "live_projects",
+   "fieldtype": "Select",
+   "label": "Live Projects",
+   "options": "Two or More (1.2)\nOne (1)\nNone (0.2)"
+  },
+  {
+   "fieldname": "participation_in_competitions",
+   "fieldtype": "Select",
+   "label": "Participation in competitions",
+   "options": "International (1.5)\nNational (1.3)\nState College (1.2)\nIntercollegiate (1.1)"
+  },
+  {
+   "fieldname": "publications",
+   "fieldtype": "Select",
+   "label": "Publications",
+   "options": "Peer reviewed Journal (1.75)\nInternational Conference (1.5)\nUGC approved Journal (1.5)\nNational Conference (1.25)\nNone (0.5)"
+  },
+  {
+   "fieldname": "awards",
+   "fieldtype": "Select",
+   "label": "Awards",
+   "options": "International (2.0)\nNational (1.8)\nState Level: (1.6)\nIntercollegiate (City level) (1.4)\nNone (1)"
+  },
+  {
+   "fieldname": "funding_required",
+   "fieldtype": "Select",
+   "label": "Funding Required",
+   "options": "Yes (1.75)\nNo (1)"
+  },
+  {
+   "fieldname": "quality_of_university",
+   "fieldtype": "Select",
+   "label": "Quality of University",
+   "options": "Accredited (1)\nNon-Accredited (0.8)"
+  },
+  {
+   "fieldname": "number_of_projects_guided",
+   "fieldtype": "Select",
+   "label": "Number of Projects Guided",
+   "options": "Two or More (1)\nOne (0.8)\nNone (0)"
+  },
+  {
+   "fieldname": "column_break_6uqt",
+   "fieldtype": "Column Break",
+   "permlevel": 1
+  },
+  {
+   "fieldname": "num_prj_guided",
+   "fieldtype": "Int",
+   "label": "Enter exact number of projects guided"
+  },
+  {
+   "fieldname": "num_ind_prj_guided",
+   "fieldtype": "Int",
+   "label": "Enter exact number of industry projects guided"
+  },
+  {
+   "fieldname": "num_live_prjs",
+   "fieldtype": "Int",
+   "label": "Enter exact number of live projects"
+  },
+  {
+   "fieldname": "num_parts_grps",
+   "fieldtype": "Int",
+   "label": "Mention number of participating groups"
+  },
+  {
+   "fieldname": "num_awards",
+   "fieldtype": "Int",
+   "label": "Mention Number of Awards"
+  },
+  {
    "fieldname": "section_break_qqgq",
    "fieldtype": "Section Break",
-   "permlevel": 1
-  },
-  {
-   "fieldname": "column_break_rtnl",
-   "fieldtype": "Column Break",
-   "permlevel": 1
-  },
-  {
-   "fieldname": "column_break_lyqq",
-   "fieldtype": "Column Break",
    "permlevel": 1
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2023-10-20 01:36:37.403057",
+ "modified": "2024-02-21 00:13:06.628090",
  "modified_by": "Administrator",
  "module": "bytenba",
  "name": "ME Projects",
