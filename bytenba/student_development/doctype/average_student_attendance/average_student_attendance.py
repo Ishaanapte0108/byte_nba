@@ -1,7 +1,8 @@
 import frappe
 from frappe.model.document import Document
-import bytenba.custom_utilities as uf
+import bytenba.form_validation as validation
 import re
+
 
 Doctype = 'Average Student Attendance'
 pattern_for_wtg = r'\((\s*(?:\d+\.\d+|\d+)\s*)\)'
@@ -9,17 +10,14 @@ pattern_for_wtg = r'\((\s*(?:\d+\.\d+|\d+)\s*)\)'
 class AverageStudentAttendance(Document):
 	"""method to autoname your document"""
 	def autoname(self):
-		self.name = f'SD1_{self.professor}_{self.academic_year}_{self.semester}'
+		self.name = f'SD1_{self.owner}_{self.academic_year}_{self.semester}'
 	
 	def before_save(self):
 		computemarks(self)
 
 	def validate(self):
-		uf.validateAY(self.academic_year)
-		existing_record = frappe.db.exists(Doctype, {'name': self.name})
-		if existing_record and existing_record != self.name:
-			frappe.throw('There already exists such a record in the database')
-
+			validation.standard_validation(self)
+			
 def computemarks(self):
 		sum = 0
 		count = 0
@@ -28,15 +26,15 @@ def computemarks(self):
 				frappe.throw('Attendance percentage entered incorrectly')
 			else:
 				count +=1
-				if item.attendance_percent > 80:
+				if item.attendance_percent >= 80:
 					temp_marks = 300
-				elif 70 < item.attendance_percent <= 80:
+				elif 70 <= item.attendance_percent < 80:
 					temp_marks = 225
-				elif 60 < item.attendance_percent <= 70:
+				elif 60 <= item.attendance_percent < 70:
 					temp_marks = 150
-				elif 50 < item.attendance_percent <= 60:
+				elif 50 <= item.attendance_percent < 60:
 					temp_marks = 105
-				elif 40 < item.attendance_percent <= 50:
+				elif 40 <= item.attendance_percent < 50:
 					temp_marks = 70
 				elif item.attendance_percent < 40:
 					temp_marks = 0
