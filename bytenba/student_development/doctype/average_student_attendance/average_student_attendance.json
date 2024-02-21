@@ -7,96 +7,134 @@
  "editable_grid": 1,
  "engine": "InnoDB",
  "field_order": [
-  "directions_tab",
-  "directions_section",
-  "dirs",
-  "form_tab",
-  "section_break_hcfb",
-  "approved",
+  "dir",
+  "section_break_qe0e",
   "reviewer_score",
-  "section_break_kzbq",
-  "professor",
-  "column_break_ckvn",
-  "academic_year",
-  "column_break_toma",
-  "semester",
-  "section_break_trfa",
-  "course_attendance_table",
-  "section_break_ssgy",
+  "column_break_hvfs",
+  "approved",
+  "section_break_ifut",
   "self_appraisal_score",
-  "reviewer",
-  "section_break_ftfz",
-  "column_break_bcux",
+  "column_break_sbus",
   "link_for_evidence",
-  "view_evidence"
+  "column_break_hpsk",
+  "professor",
+  "designation",
+  "section_break_uihc",
+  "academic_year",
+  "department",
+  "column_break_vbeg",
+  "semester",
+  "reviewer",
+  "section_break_uto1",
+  "course_attendance_table"
  ],
  "fields": [
   {
-   "fieldname": "directions_section",
-   "fieldtype": "Section Break"
-  },
-  {
-   "fieldname": "dirs",
+   "fieldname": "dir",
    "fieldtype": "HTML",
-   "label": "Dirs",
-   "options": "<br>\n  <b>Student-Development 1</b>\n  <br>Maximum marks possible are <b>300</b>.<br>\n  <br>Marks Criteria:<br>\n  <br>If avg attendance 80% and above: <b>300</b><br>\n  <br>If avg attendance 80% to 70%: <b>225</b><br>\n  <br>If avg attendnace 70% to 60%: <b>150</b><br>\n  <br>If avg attendance 60% to 50%: <b>150</b><br>\n  <br>If avg attendace 40% to 50%:  <b>70</b><br>\n  <br>If avg attendace below 50%:   <b>0</b><br>\n  <br>Self appraisal score is the <b>average</b> of the marks obtained<br>\n<p></p>"
+   "label": "dir",
+   "options": "<p>\n  <br><b>Student development 1</b><br>\n\n  <br>Maximum marks possible are <b>300</b>.<br>\n\n <br>Self appraisal score is <b>AVG(Product of applicable weightages)</b> <br>\n\n</p>"
   },
   {
-   "fieldname": "section_break_hcfb",
+   "fieldname": "section_break_qe0e",
    "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "reviewer_score",
+   "fieldtype": "Data",
+   "label": "Reviewer Score",
+   "permlevel": 1,
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_hvfs",
+   "fieldtype": "Column Break"
   },
   {
    "default": "0",
+   "depends_on": "approved",
    "fieldname": "approved",
    "fieldtype": "Check",
    "label": "Approved",
    "permlevel": 1
   },
   {
-   "fieldname": "reviewer_score",
-   "fieldtype": "Data",
-   "label": "Reviewer Score",
-   "permlevel": 1
+   "fieldname": "section_break_ifut",
+   "fieldtype": "Section Break"
   },
   {
-   "fieldname": "section_break_kzbq",
+   "fieldname": "self_appraisal_score",
+   "fieldtype": "Float",
+   "label": "Self Appraisal Score",
+   "permlevel": 1,
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_sbus",
+   "fieldtype": "Column Break"
+  },
+  {
+   "columns": 2,
+   "depends_on": "self_appraisal_score",
+   "fieldname": "link_for_evidence",
+   "fieldtype": "Attach",
+   "label": "Link for evidence"
+  },
+  {
+   "fieldname": "column_break_hpsk",
    "fieldtype": "Section Break"
   },
   {
    "fieldname": "professor",
    "fieldtype": "Read Only",
-   "label": "Professor"
+   "label": "Faculty",
+   "reqd": 1
   },
   {
-   "fieldname": "column_break_ckvn",
+   "fieldname": "designation",
+   "fieldtype": "Data",
+   "label": "Designation",
+   "read_only": 1,
+   "reqd": 1
+  },
+  {
+   "fieldname": "section_break_uihc",
    "fieldtype": "Column Break"
   },
   {
    "fieldname": "academic_year",
    "fieldtype": "Data",
-   "in_list_view": 1,
    "label": "Academic Year",
    "reqd": 1
   },
   {
-   "fieldname": "column_break_toma",
+   "fieldname": "department",
+   "fieldtype": "Link",
+   "label": "Department",
+   "options": "Department",
+   "read_only": 1,
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_vbeg",
    "fieldtype": "Column Break"
   },
   {
    "fieldname": "semester",
    "fieldtype": "Select",
-   "in_list_view": 1,
    "label": "Semester",
    "options": "Odd\nEven",
    "reqd": 1
   },
   {
-   "fieldname": "form_tab",
-   "fieldtype": "Tab Break",
-   "label": "Form"
+   "fieldname": "reviewer",
+   "fieldtype": "Read Only",
+   "in_list_view": 1,
+   "label": "Reviewer",
+   "reqd": 1
   },
   {
-   "fieldname": "section_break_trfa",
+   "fieldname": "section_break_uto1",
    "fieldtype": "Section Break"
   },
   {
@@ -105,50 +143,11 @@
    "label": "Course Attendance Table",
    "options": "sd1",
    "reqd": 1
-  },
-  {
-   "fieldname": "section_break_ssgy",
-   "fieldtype": "Section Break"
-  },
-  {
-   "fieldname": "self_appraisal_score",
-   "fieldtype": "Float",
-   "label": "Self Appraisal Score",
-   "read_only": 1
-  },
-  {
-   "fieldname": "reviewer",
-   "fieldtype": "Read Only",
-   "label": "Reviewer",
-   "read_only": 1
-  },
-  {
-   "fieldname": "section_break_ftfz",
-   "fieldtype": "Section Break"
-  },
-  {
-   "fieldname": "link_for_evidence",
-   "fieldtype": "Attach",
-   "label": "Link for evidence"
-  },
-  {
-   "fieldname": "column_break_bcux",
-   "fieldtype": "Column Break"
-  },
-  {
-   "fieldname": "view_evidence",
-   "fieldtype": "Button",
-   "label": "View Evidence"
-  },
-  {
-   "fieldname": "directions_tab",
-   "fieldtype": "Tab Break",
-   "label": "Directions"
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2023-11-03 22:31:01.415263",
+ "modified": "2024-02-21 13:24:04.552844",
  "modified_by": "Administrator",
  "module": "Student Development",
  "name": "Average Student Attendance",
@@ -167,14 +166,26 @@
    "write": 1
   },
   {
+   "create": 1,
    "delete": 1,
    "email": 1,
    "export": 1,
-   "permlevel": 1,
    "print": 1,
    "read": 1,
    "report": 1,
-   "role": "System Manager",
+   "role": "vit_emp",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "reviewer",
    "share": 1,
    "write": 1
   }
