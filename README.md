@@ -39,3 +39,72 @@ ERP for appraisal process
 10> Revert title field to professor
 11> Check everything is fine
 12> Add doctype name to report.py at line 55
+
+
+
+Requirements for adding access control to your website
+
+1> Make sure to have reviewers doctype
+2> Make sure to have users in your database
+3> Make sure to have professors doctype
+4> Create has role profiles
+
+4.1> executive pofile 
+has role {executive} 
+//create role if not present, disable all except notifications, timeline and dashboard
+
+4.2> system manager profile
+//create role if not present, disable all except notifications, timeline and dashboard
+
+4.3> principle profile
+//create role principle if not present, disable all except notifications, timeline and dashboard
+
+4.4> trustee profile 
+//create role trustee if not present, disable all except notifications, timeline and dashboard
+
+4.5> pa profile
+//create role pa_teamif not present, disable all except notifications, timeline and dashboard
+
+4.6> faculty role profile 
+//create role vit_emp if not present, disable all except notifications, timeline and dashboard
+
+4.7> reviewer profile 
+reviewer
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
