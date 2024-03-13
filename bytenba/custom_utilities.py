@@ -4,8 +4,6 @@ import frappe
 import re
 import os, uuid
 import boto3, requests
-from azure.identity import DefaultAzureCredential
-from azure.storage.blob import BlobServiceClient, BlobClient, ContainerClient
 from frappe.utils import today
 
 def validate_delete(doc, method):
