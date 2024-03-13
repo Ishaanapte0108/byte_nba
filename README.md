@@ -38,7 +38,7 @@ ERP for appraisal process
 
 10> Revert title field to professor
 11> Check everything is fine
-12> Add doctype name to report.py at line 55
+12> Add doctype name to analysis.py at line 55
 
 
 
