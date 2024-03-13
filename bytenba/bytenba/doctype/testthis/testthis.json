@@ -1,0 +1,117 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2024-03-13 23:15:37.997584",
+ "default_view": "List",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "section_break_ecs8",
+  "number_of_projects_guided",
+  "live_or_industry_projects",
+  "participation_in_competitions",
+  "awards",
+  "publications",
+  "column_break_ud5h",
+  "exact_num_prj",
+  "exact_num_ind_live_prj",
+  "parts_grp",
+  "num_awards"
+ ],
+ "fields": [
+  {
+   "fieldname": "section_break_ecs8",
+   "fieldtype": "Section Break",
+   "permlevel": 1
+  },
+  {
+   "fieldname": "number_of_projects_guided",
+   "fieldtype": "Select",
+   "label": "Number of Projects Guided",
+   "options": "Ten or more (1)\nLess than 10 (0.8)",
+   "permlevel": 1
+  },
+  {
+   "fieldname": "live_or_industry_projects",
+   "fieldtype": "Select",
+   "label": "Live or Industry Projects",
+   "options": "Yes (1.2)\nNone (0.5)",
+   "permlevel": 1
+  },
+  {
+   "fieldname": "participation_in_competitions",
+   "fieldtype": "Select",
+   "label": "Participation in Competitions",
+   "options": "International (1.5)\nNational AICTE / IEEE sponsored (1.3)\nState College (1.2)\nIntercollegiate (1.1)",
+   "permlevel": 1
+  },
+  {
+   "fieldname": "awards",
+   "fieldtype": "Select",
+   "label": "Awards",
+   "options": "International (2.0)\nNational (1.8)\nState Level: (1.6)\nIntercollegiate (City level) (1.4)\nNone (1)",
+   "permlevel": 1
+  },
+  {
+   "fieldname": "publications",
+   "fieldtype": "Select",
+   "label": "Publications",
+   "options": "Peer reviewed Journal (1.75)\nInternational Conference (1.5)\nUGC approved Journal (1.5)\nNational Conference (1.25)\nNone (0.5)",
+   "permlevel": 1
+  },
+  {
+   "fieldname": "column_break_ud5h",
+   "fieldtype": "Column Break",
+   "permlevel": 1
+  },
+  {
+   "fieldname": "exact_num_prj",
+   "fieldtype": "Int",
+   "label": "Exact Number of Projects Guided",
+   "permlevel": 1
+  },
+  {
+   "fieldname": "exact_num_ind_live_prj",
+   "fieldtype": "Int",
+   "label": "Exact Number of Industry / Live Projects",
+   "permlevel": 1
+  },
+  {
+   "fieldname": "parts_grp",
+   "fieldtype": "Int",
+   "label": "Exact Number of Participating Groups",
+   "permlevel": 1
+  },
+  {
+   "fieldname": "num_awards",
+   "fieldtype": "Int",
+   "label": "Exact Number of Awards",
+   "permlevel": 1
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2024-03-13 23:15:37.997584",
+ "modified_by": "Administrator",
+ "module": "bytenba",
+ "name": "testThis",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

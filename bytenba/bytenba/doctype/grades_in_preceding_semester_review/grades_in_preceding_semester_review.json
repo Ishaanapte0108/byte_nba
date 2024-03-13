@@ -1,12 +1,13 @@
 {
  "actions": [],
  "allow_rename": 1,
- "creation": "2024-02-16 13:00:34.406539",
+ "creation": "2024-03-14 00:07:16.740285",
+ "default_view": "List",
  "doctype": "DocType",
+ "editable_grid": 1,
  "engine": "InnoDB",
  "field_order": [
-  "section_break_4dwp",
-  "html_xhqd",
+  "dir",
   "section_break_qe0e",
   "reviewer_score",
   "column_break_hvfs",
@@ -24,24 +25,15 @@
   "column_break_vbeg",
   "semester",
   "reviewer",
-  "section_break_azxy",
-  "col1",
-  "col2",
-  "col3",
-  "column_break_rjyd",
-  "col4",
-  "col5"
+  "section_break_uto1",
+  "precd_sem_grade"
  ],
  "fields": [
   {
-   "fieldname": "section_break_4dwp",
-   "fieldtype": "Section Break"
-  },
-  {
-   "fieldname": "html_xhqd",
+   "fieldname": "dir",
    "fieldtype": "HTML",
    "label": "dir",
-   "options": "<p>\n  <br><b>Academic Involvement 8</b><br>\n\n  <br>Maximum marks possible are <b>295</b>.<br>\n  \n  </p><p>Self appraisal score is calculated as <b>PRODUCT(Applicable Weightages)*50</b></p>\n\n  <p></p><p>Quantities in bracket represent marks for the respective option</p>\n\n<p></p>"
+   "options": "<p>\n  <br><b>Academic Involvement AI14</b><br>\n\n  <br>Maximum marks possible are <b>100</b>.<br>\n\n <br>Self appraisal score is <b>Applicable weightages for each option</b> <br>\n\n</p>"
   },
   {
    "fieldname": "section_break_qe0e",
@@ -142,50 +134,22 @@
    "reqd": 1
   },
   {
-   "fieldname": "section_break_azxy",
+   "fieldname": "section_break_uto1",
    "fieldtype": "Section Break"
   },
   {
-   "fieldname": "col1",
+   "fieldname": "precd_sem_grade",
    "fieldtype": "Select",
-   "label": "Type of guide",
-   "options": "Industry expert as Co-guide (1.5)\nFaculty guided only (1)"
-  },
-  {
-   "fieldname": "col2",
-   "fieldtype": "Select",
-   "label": "Type of organisation of industry co-guide",
-   "options": "MNC (1.5)\nNational (1.3)\nSMEs (1.1)\nNone (1)"
-  },
-  {
-   "fieldname": "col3",
-   "fieldtype": "Select",
-   "label": "Type of project",
-   "options": "Functional Project (1.0)\nNon functional Project (0.5)"
-  },
-  {
-   "fieldname": "column_break_rjyd",
-   "fieldtype": "Column Break"
-  },
-  {
-   "fieldname": "col4",
-   "fieldtype": "Select",
-   "label": "Publications",
-   "options": "Peer Reviewed Journal (1.75)\nInternational Conference (1.5)\nUGC approved Journal (1.5)\nNational Conference (1.25)\nNone (1)"
-  },
-  {
-   "fieldname": "col5",
-   "fieldtype": "Select",
-   "label": "Mapping",
-   "options": "Strongly to PO (1.5)\nStrongly to CO (1)\nModerately to PO (1)\nModerately to CO (0.8)\nNeither mapping to PO or CO (0)"
+   "label": "Enter preceding semester preview grade",
+   "options": "A (100)\nB (50)\nC (25)\nOthers (0)"
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2024-02-16 14:07:08.609447",
+ "modified": "2024-03-14 00:19:57.153828",
  "modified_by": "Administrator",
  "module": "bytenba",
- "name": "Mini project as a subject head",
+ "name": "Grades in preceding semester review",
  "owner": "Administrator",
  "permissions": [
   {
@@ -197,6 +161,30 @@
    "read": 1,
    "report": 1,
    "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "vit_emp",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "reviewer",
    "share": 1,
    "write": 1
   }

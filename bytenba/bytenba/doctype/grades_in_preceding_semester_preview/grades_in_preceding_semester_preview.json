@@ -1,7 +1,7 @@
 {
  "actions": [],
  "allow_rename": 1,
- "creation": "2023-10-20 11:25:58.768105",
+ "creation": "2023-10-16 23:26:56.529874",
  "default_view": "List",
  "doctype": "DocType",
  "editable_grid": 1,
@@ -24,14 +24,16 @@
   "department",
   "column_break_vbeg",
   "semester",
-  "reviewer"
+  "reviewer",
+  "section_break_uto1",
+  "precd_sem_grade"
  ],
  "fields": [
   {
    "fieldname": "dir",
    "fieldtype": "HTML",
    "label": "dir",
-   "options": "<style>\np{\n    margin-top: 10px;\n  }\n</style>\n<p>\nAcademic Involvement bracket, evaluation criteria is guest lectures, a beyond syllabus activity.\nQuantities in bracket represent marks for the respective option. Total maximum marks possible is 113\n</p>"
+   "options": "<p>\n  <br><b>Academic Involvement AI13</b><br>\n\n  <br>Maximum marks possible are <b>100</b>.<br>\n\n <br>Self appraisal score is <b>Applicable weightages for each option</b> <br>\n\n</p>"
   },
   {
    "fieldname": "section_break_qe0e",
@@ -130,14 +132,24 @@
    "in_list_view": 1,
    "label": "Reviewer",
    "reqd": 1
+  },
+  {
+   "fieldname": "section_break_uto1",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "precd_sem_grade",
+   "fieldtype": "Select",
+   "label": "Enter preceding semester preview grade",
+   "options": "A (100)\nB (50)\nC (25)\nOthers (0)"
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2024-03-13 23:22:15.648328",
+ "modified": "2024-03-14 00:00:53.317452",
  "modified_by": "Administrator",
  "module": "bytenba",
- "name": "MMS FY Projects",
+ "name": "Grades in preceding semester preview",
  "owner": "Administrator",
  "permissions": [
   {
@@ -155,5 +167,6 @@
  ],
  "sort_field": "modified",
  "sort_order": "DESC",
- "states": []
+ "states": [],
+ "title_field": "professor"
 }

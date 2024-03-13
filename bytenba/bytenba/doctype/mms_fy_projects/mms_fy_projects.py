@@ -1,31 +1,21 @@
 import frappe
 from frappe.model.document import Document
-import bytenba.custom_utilities as uf
+import bytenba.form_validation as validation
 import re
 
 Doctype = 'MMS FY Projects'
-
 pattern_for_wtg = r'\((\s*(?:\d+\.\d+|\d+)\s*)\)'
 
 class MMSFYProjects(Document):
   
   def autoname(self):
-    self.name = f'AI10MMS_{self.academic_year}_{self.semester}_{self.professor}'
+    self.name = f'AI10MMS_{self.owner}_{self.semester}_{self.professor}'
   
   def before_save(self):
-    self_appraisal_score = compute_marks(self)
-    self.self_appraisal_score = self_appraisal_score
+    self.self_appraisal_score = compute_marks(self)
 
   def validate(self):
-    #validate academic year str
-    ay_validation_dict = uf.validateAY(self.academic_year)
-    if not ay_validation_dict['valid']:
-      frappe.throw(ay_validation_dict['error_msg'])
-
-    #validate if same record exists in database
-    existing_record = frappe.db.exists(Doctype, {'name': self.name})
-    if existing_record and existing_record != self.name:
-      frappe.throw('There already exists such a record in the database')  
+    validation.standard_validation(self)
 
 def compute_marks(self):
 

@@ -223,7 +223,7 @@
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2024-02-16 15:27:52.889041",
+ "modified": "2024-03-13 22:57:12.411528",
  "modified_by": "Administrator",
  "module": "bytenba",
  "name": "BE Projects",
@@ -244,5 +244,6 @@
  ],
  "sort_field": "modified",
  "sort_order": "DESC",
- "states": []
+ "states": [],
+ "title_field": "professor"
 }

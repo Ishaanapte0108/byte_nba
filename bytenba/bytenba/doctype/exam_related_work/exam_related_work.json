@@ -7,35 +7,141 @@
  "editable_grid": 1,
  "engine": "InnoDB",
  "field_order": [
+  "dir",
+  "section_break_qe0e",
+  "reviewer_score",
+  "column_break_hvfs",
+  "approved",
+  "section_break_ifut",
+  "self_appraisal_score",
+  "column_break_sbus",
+  "link_for_evidence",
+  "column_break_hpsk",
   "professor",
-  "column_break_hg3uc",
+  "designation",
+  "section_break_uihc",
   "academic_year",
+  "department",
+  "column_break_vbeg",
+  "semester",
+  "reviewer",
   "column_break_ore80",
   "chief_conductor",
+  "paper_solutions",
+  "senior_supervisor",
+  "design_of_curriculum",
+  "paper_assessment",
   "column_break_t6u1i",
   "cap_incharge",
-  "section_break_ohbyv",
-  "senior_supervisor",
-  "column_break_yafta",
   "paper_setting",
-  "section_break_tw6vy",
-  "paper_solutions",
-  "column_break_fgxh8",
   "vigilance_squad_member",
-  "section_break_bi2le",
-  "design_of_curriculum",
-  "column_break_rlkvx",
-  "invigilation",
-  "section_break_fgpqf",
-  "paper_assessment",
-  "column_break_178qi",
-  "self_appraisal_score",
-  "section_break_oxpzl",
-  "link_for_evidence",
-  "reviewer",
-  "approved"
+  "invigilation"
  ],
  "fields": [
+  {
+   "fieldname": "dir",
+   "fieldtype": "HTML",
+   "label": "dir",
+   "options": "<p>\n  <br><b>Academic Involvement AI12 (Exam related work)</b><br>\n\n  <br>Maximum marks possible are <b>100</b>.<br>\n\n <br>Self appraisal score is <b>Greatest of SUM(Applicable weightages) or 100 </b> <br>\n\n</p>"
+  },
+  {
+   "fieldname": "section_break_qe0e",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "reviewer_score",
+   "fieldtype": "Data",
+   "label": "Reviewer Score",
+   "permlevel": 1,
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_hvfs",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "depends_on": "approved",
+   "fieldname": "approved",
+   "fieldtype": "Check",
+   "label": "Approved",
+   "permlevel": 1
+  },
+  {
+   "fieldname": "section_break_ifut",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "self_appraisal_score",
+   "fieldtype": "Float",
+   "label": "Self Appraisal Score",
+   "permlevel": 1,
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_sbus",
+   "fieldtype": "Column Break"
+  },
+  {
+   "columns": 2,
+   "depends_on": "self_appraisal_score",
+   "fieldname": "link_for_evidence",
+   "fieldtype": "Attach",
+   "label": "Link for evidence"
+  },
+  {
+   "fieldname": "column_break_hpsk",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "professor",
+   "fieldtype": "Read Only",
+   "label": "Faculty",
+   "reqd": 1
+  },
+  {
+   "fieldname": "designation",
+   "fieldtype": "Data",
+   "label": "Designation",
+   "read_only": 1,
+   "reqd": 1
+  },
+  {
+   "fieldname": "section_break_uihc",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "academic_year",
+   "fieldtype": "Data",
+   "label": "Academic Year",
+   "reqd": 1
+  },
+  {
+   "fieldname": "department",
+   "fieldtype": "Link",
+   "label": "Department",
+   "options": "Department",
+   "read_only": 1,
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_vbeg",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "semester",
+   "fieldtype": "Select",
+   "label": "Semester",
+   "options": "Odd\nEven",
+   "reqd": 1
+  },
+  {
+   "fieldname": "reviewer",
+   "fieldtype": "Read Only",
+   "in_list_view": 1,
+   "label": "Reviewer",
+   "reqd": 1
+  },
   {
    "fieldname": "chief_conductor",
    "fieldtype": "Int",
@@ -77,97 +183,22 @@
    "label": "Paper assessment/Moderation (10)"
   },
   {
-   "fieldname": "section_break_tw6vy",
-   "fieldtype": "Section Break"
-  },
-  {
-   "fieldname": "section_break_bi2le",
-   "fieldtype": "Section Break"
-  },
-  {
-   "fieldname": "section_break_fgpqf",
-   "fieldtype": "Section Break"
-  },
-  {
-   "fieldname": "link_for_evidence",
-   "fieldtype": "Attach",
-   "in_list_view": 1,
-   "label": "Link for evidence",
-   "reqd": 1
-  },
-  {
-   "fieldname": "column_break_hg3uc",
-   "fieldtype": "Column Break"
-  },
-  {
    "fieldname": "column_break_t6u1i",
    "fieldtype": "Column Break"
-  },
-  {
-   "fieldname": "column_break_yafta",
-   "fieldtype": "Column Break"
-  },
-  {
-   "fieldname": "column_break_fgxh8",
-   "fieldtype": "Column Break"
-  },
-  {
-   "fieldname": "professor",
-   "fieldtype": "Read Only",
-   "label": "Professor"
-  },
-  {
-   "fieldname": "academic_year",
-   "fieldtype": "Data",
-   "label": "Academic year",
-   "reqd": 1
-  },
-  {
-   "fieldname": "section_break_ohbyv",
-   "fieldtype": "Section Break"
-  },
-  {
-   "fieldname": "column_break_rlkvx",
-   "fieldtype": "Column Break"
-  },
-  {
-   "fieldname": "column_break_178qi",
-   "fieldtype": "Column Break"
-  },
-  {
-   "fieldname": "self_appraisal_score",
-   "fieldtype": "Int",
-   "label": "Self appraisal score",
-   "read_only": 1
   },
   {
    "fieldname": "column_break_ore80",
    "fieldtype": "Section Break"
   },
   {
-   "fieldname": "section_break_oxpzl",
-   "fieldtype": "Section Break"
-  },
-  {
    "fieldname": "senior_supervisor",
    "fieldtype": "Int",
    "label": "Senior supervisor (30)"
-  },
-  {
-   "fieldname": "reviewer",
-   "fieldtype": "Read Only",
-   "label": "Reviewer"
-  },
-  {
-   "default": "0",
-   "fieldname": "approved",
-   "fieldtype": "Check",
-   "label": "Approved"
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2023-10-22 00:28:06.394805",
+ "modified": "2024-03-13 21:41:00.449127",
  "modified_by": "Administrator",
  "module": "bytenba",
  "name": "Exam related work",
@@ -184,9 +215,34 @@
    "role": "System Manager",
    "share": 1,
    "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "vit_emp",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "reviewer",
+   "share": 1,
+   "write": 1
   }
  ],
  "sort_field": "modified",
  "sort_order": "DESC",
- "states": []
+ "states": [],
+ "title_field": "professor"
 }

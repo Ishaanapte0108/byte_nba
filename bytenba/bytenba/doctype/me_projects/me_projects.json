@@ -25,7 +25,6 @@
   "column_break_vbeg",
   "semester",
   "reviewer",
-  "section_break_uto1",
   "section_break_qqgq",
   "number_of_projects_guided",
   "industry_projects",
@@ -47,7 +46,7 @@
    "fieldname": "dir",
    "fieldtype": "HTML",
    "label": "dir",
-   "options": "<style>\np{\n    margin-top: 10px;\n  }\n</style>\n<p>\nAcademic Involvement bracket, evaluation criteria is guest lectures, a beyond syllabus activity.\nQuantities in bracket represent marks for the respective option. Total maximum marks possible is 113\n</p>"
+   "options": "<p>\n  <br><b>Academic Involvement AI10 (Engg)</b><br>\n\n  <br>Maximum marks possible are <b>1323</b>.<br>\n\n <br>Self appraisal score is <b>PRODUCT(Applicable weightages)*100 </b> <br>\n\n</p>"
   },
   {
    "fieldname": "section_break_qe0e",
@@ -148,10 +147,6 @@
    "reqd": 1
   },
   {
-   "fieldname": "section_break_uto1",
-   "fieldtype": "Section Break"
-  },
-  {
    "fieldname": "industry_projects",
    "fieldtype": "Select",
    "label": "Industry Projects",
@@ -237,7 +232,7 @@
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2024-02-21 00:13:06.628090",
+ "modified": "2024-03-13 23:10:23.153802",
  "modified_by": "Administrator",
  "module": "bytenba",
  "name": "ME Projects",
@@ -252,30 +247,6 @@
    "read": 1,
    "report": 1,
    "role": "System Manager",
-   "share": 1,
-   "write": 1
-  },
-  {
-   "create": 1,
-   "delete": 1,
-   "email": 1,
-   "export": 1,
-   "print": 1,
-   "read": 1,
-   "report": 1,
-   "role": "vit_emp",
-   "share": 1,
-   "write": 1
-  },
-  {
-   "create": 1,
-   "delete": 1,
-   "email": 1,
-   "export": 1,
-   "print": 1,
-   "read": 1,
-   "report": 1,
-   "role": "reviewer",
    "share": 1,
    "write": 1
   }
