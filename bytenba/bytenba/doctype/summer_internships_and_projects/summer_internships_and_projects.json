@@ -182,7 +182,7 @@
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2024-02-16 15:38:57.788726",
+ "modified": "2024-03-13 23:03:05.634719",
  "modified_by": "Administrator",
  "module": "bytenba",
  "name": "Summer internships and projects",
@@ -203,5 +203,6 @@
  ],
  "sort_field": "modified",
  "sort_order": "DESC",
- "states": []
+ "states": [],
+ "title_field": "professor"
 }

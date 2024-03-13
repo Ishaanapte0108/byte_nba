@@ -5,5 +5,5 @@
 from frappe.tests.utils import FrappeTestCase
 
 
-class TestGradesinprecedingsemesterAI14(FrappeTestCase):
+class TestGradesinprecedingsemesterpreview(FrappeTestCase):
 	pass
