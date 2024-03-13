@@ -6,125 +6,135 @@
  "editable_grid": 1,
  "engine": "InnoDB",
  "field_order": [
-  "html_xdfi",
-  "fill_form_tab",
-  "section_break_gfin",
-  "approved",
+  "dir",
+  "section_break_qe0e",
   "reviewer_score",
-  "section_break_oxnp",
-  "professor",
-  "column_break_cnjb",
-  "academic_year",
-  "column_break_wgzn",
-  "semester",
-  "section_break_pifa",
-  "topper_marks_table",
-  "section_break_axdu",
-  "reviewer",
-  "column_break_gcin",
+  "column_break_hvfs",
+  "approved",
+  "section_break_ifut",
   "self_appraisal_score",
-  "section_break_rcmj",
+  "column_break_sbus",
   "link_for_evidence",
-  "view_evidence"
+  "column_break_hpsk",
+  "professor",
+  "designation",
+  "section_break_uihc",
+  "academic_year",
+  "department",
+  "column_break_vbeg",
+  "semester",
+  "reviewer",
+  "section_break_uto1",
+  "topper_marks_table"
  ],
  "fields": [
   {
-   "fieldname": "html_xdfi",
-   "fieldtype": "HTML",
-   "options": "<p>\n  <b>Student-Development 3</b>\n  <br>Maximum marks possible are <b>500</b>.<br>\n  <br>Each attendance bucket has pre-allotted marks<br>\n  <br>Marks will be multiplied by number of students in the bucket<br>\n  <br>Marks 100% :      <b>20</b><br>\n  <br>Marks 90 to 99% : <b>15</b><br>\n  <br>Marks 80 to 89% : <b>10</b><br>\n  <br>Marks 70 to 79% : <b>7</b><br>\n  <br>Marks 60 to 69% : <b>5</b><br>\n  <br>Marks below 60% : <b>0</b><br>\n  <br>Self appraisal score is the <b>average</b> of the marks obtained, or maximum marks possible <b>if average exceeds 500</b><br>\n</p>"
+    "fieldname": "dir",
+    "fieldtype": "HTML",
+    "label": "dir",
+    "options": "<style>\np{\n    margin-top: 10px;\n  }\n</style>\n<p>\nAcademic Involvement bracket, evaluation criteria is guest lectures, a beyond syllabus activity.\nQuantities in bracket represent marks for the respective option. Total maximum marks possible is 113\n</p>"
   },
   {
-   "fieldname": "fill_form_tab",
-   "fieldtype": "Tab Break",
-   "label": "Fill Form"
+    "fieldname": "section_break_qe0e",
+    "fieldtype": "Section Break"
   },
   {
-   "fieldname": "section_break_gfin",
-   "fieldtype": "Section Break"
+    "fieldname": "reviewer_score",
+    "fieldtype": "Data",
+    "label": "Reviewer Score",
+    "permlevel": 1,
+    "read_only": 1
   },
   {
-   "default": "0",
-   "fieldname": "approved",
-   "fieldtype": "Check",
-   "label": "Approved",
-   "permlevel": 1
+    "fieldname": "column_break_hvfs",
+    "fieldtype": "Column Break"
   },
   {
-   "fieldname": "reviewer_score",
-   "fieldtype": "Data",
-   "label": "Reviewer Score",
-   "permlevel": 1
+    "default": "0",
+    "depends_on": "approved",
+    "fieldname": "approved",
+    "fieldtype": "Check",
+    "label": "Approved",
+    "permlevel": 1
   },
   {
-   "fieldname": "section_break_oxnp",
-   "fieldtype": "Section Break"
+    "fieldname": "section_break_ifut",
+    "fieldtype": "Section Break"
   },
   {
-   "fieldname": "professor",
-   "fieldtype": "Data",
-   "label": "Professor",
-   "read_only": 1
+    "fieldname": "self_appraisal_score",
+    "fieldtype": "Float",
+    "label": "Self Appraisal Score",
+    "permlevel": 1,
+    "read_only": 1
   },
   {
-   "fieldname": "column_break_cnjb",
-   "fieldtype": "Column Break"
+    "fieldname": "column_break_sbus",
+    "fieldtype": "Column Break"
   },
   {
-   "fieldname": "academic_year",
-   "fieldtype": "Data",
-   "in_list_view": 1,
-   "label": "Academic Year",
-   "reqd": 1
+    "columns": 2,
+    "depends_on": "self_appraisal_score",
+    "fieldname": "link_for_evidence",
+    "fieldtype": "Attach",
+    "label": "Link for evidence"
   },
   {
-   "fieldname": "column_break_wgzn",
-   "fieldtype": "Column Break"
+    "fieldname": "column_break_hpsk",
+    "fieldtype": "Section Break"
   },
   {
-   "fieldname": "semester",
-   "fieldtype": "Select",
-   "label": "Semester",
-   "options": "Odd\nEven"
+    "fieldname": "professor",
+    "fieldtype": "Read Only",
+    "label": "Faculty",
+    "reqd": 1
   },
   {
-   "fieldname": "section_break_pifa",
-   "fieldtype": "Section Break"
+    "fieldname": "designation",
+    "fieldtype": "Data",
+    "label": "Designation",
+    "read_only": 1,
+    "reqd": 1
   },
   {
-   "fieldname": "section_break_axdu",
-   "fieldtype": "Section Break"
+    "fieldname": "section_break_uihc",
+    "fieldtype": "Column Break"
   },
   {
-   "fieldname": "reviewer",
-   "fieldtype": "Data",
-   "label": "Reviewer",
-   "read_only": 1
+    "fieldname": "academic_year",
+    "fieldtype": "Data",
+    "label": "Academic Year",
+    "reqd": 1
   },
   {
-   "fieldname": "column_break_gcin",
-   "fieldtype": "Column Break",
-   "read_only": 1
+    "fieldname": "department",
+    "fieldtype": "Link",
+    "label": "Department",
+    "options": "Department",
+    "read_only": 1,
+    "reqd": 1
   },
   {
-   "fieldname": "self_appraisal_score",
-   "fieldtype": "Data",
-   "label": "Self Appraisal Score",
-   "read_only": 1
+    "fieldname": "column_break_vbeg",
+    "fieldtype": "Column Break"
   },
   {
-   "fieldname": "section_break_rcmj",
-   "fieldtype": "Section Break",
-   "hidden": 1
+    "fieldname": "semester",
+    "fieldtype": "Select",
+    "label": "Semester",
+    "options": "Odd\nEven",
+    "reqd": 1
   },
   {
-   "fieldname": "link_for_evidence",
-   "fieldtype": "Attach",
-   "label": "Link for evidence"
+    "fieldname": "reviewer",
+    "fieldtype": "Read Only",
+    "in_list_view": 1,
+    "label": "Reviewer",
+    "reqd": 1
   },
   {
-   "fieldname": "view_evidence",
-   "fieldtype": "Button",
-   "label": "View Evidence"
+    "fieldname": "section_break_uto1",
+    "fieldtype": "Section Break"
   },
   {
    "description": "Click Edit to enter detailed information about each course",
@@ -137,7 +147,7 @@
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2023-11-04 13:23:28.295493",
+ "modified": "2024-02-22 12:02:57.404121",
  "modified_by": "Administrator",
  "module": "Student Development",
  "name": "Topper Marks",

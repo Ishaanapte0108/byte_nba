@@ -14,8 +14,6 @@
   "approved",
   "section_break_ifut",
   "self_appraisal_score",
-  "column_break_sbus",
-  "link_for_evidence",
   "column_break_hpsk",
   "professor",
   "designation",
@@ -26,12 +24,13 @@
   "semester",
   "reviewer",
   "section_break_uto1",
-  "platform",
-  "platform_type",
-  "date_of_cerftification",
-  "column_break_psvr",
   "number_of_hours",
-  "assessment_outcome"
+  "platform_type",
+  "column_break_npkd",
+  "date_of_cerftification",
+  "assessment_outcome",
+  "link_for_evidence_section",
+  "link_for_evidence"
  ],
  "fields": [
   {
@@ -43,11 +42,6 @@
    "fieldtype": "Read Only",
    "label": "Faculty",
    "reqd": 1
-  },
-  {
-   "fieldname": "platform",
-   "fieldtype": "Data",
-   "label": "Platform"
   },
   {
    "fieldname": "number_of_hours",
@@ -82,14 +76,9 @@
   },
   {
    "columns": 2,
-   "depends_on": "self_appraisal_score",
    "fieldname": "link_for_evidence",
    "fieldtype": "Attach",
    "label": "Link for evidence"
-  },
-  {
-   "fieldname": "column_break_psvr",
-   "fieldtype": "Column Break"
   },
   {
    "fieldname": "column_break_hpsk",
@@ -105,7 +94,7 @@
    "fieldname": "dir",
    "fieldtype": "HTML",
    "label": "dir",
-   "options": "<style>\np{\n    margin-top: 10px;\n  }\n</style>\n<p>For multiple certifications:\nProvide data of two best certificates (having maximum marks).\nBest of the two marks shall be considered as final marks</p>\n<p>\nQuantities in bracket represent marks for the respective option. Total maximum marks possible is 150\n</p>"
+   "options": "<p>\n  <br><b>Academic Involvement 1</b><br>\n\n  <br>Maximum marks possible are <b>150</b>.<br>\n\n  <br>Self appraisal score is <b>100*Product of applicable weightages</b> <br>\n  \n  </p><p>Weightage for a option is indicated by the value in the parenthesis of the option selected</p>\n\n<p></p>"
   },
   {
    "fieldname": "semester",
@@ -172,13 +161,17 @@
    "fieldtype": "Section Break"
   },
   {
-   "fieldname": "column_break_sbus",
+   "fieldname": "link_for_evidence_section",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "column_break_npkd",
    "fieldtype": "Column Break"
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2024-01-14 19:11:42.779433",
+ "modified": "2024-03-13 12:15:29.980489",
  "modified_by": "Administrator",
  "module": "bytenba",
  "name": "Certification for courses allotted",
