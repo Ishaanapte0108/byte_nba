@@ -3,6 +3,14 @@ const DocType = "Certification for courses allotted"
 frappe.ui.form.on(DocType, {
 
   refresh: function(frm) {
+		
+		$("#navbar-breadcrumbs").css({'visibility':'hidden'});
+		$(".btn.btn-xs.btn-secondary.action-btn").css({'visibility':'hidden'});
+		$(".btn.btn-default.icon-btn").hide();
+		$(".col-lg-2.layout-side-section").hide();
+
+
+
 
 		if (frm.is_new()){
 			
