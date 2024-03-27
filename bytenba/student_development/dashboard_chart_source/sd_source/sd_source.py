@@ -10,7 +10,8 @@ def get(**kwargs):
   
 	filters = frappe.parse_json(kwargs['filters'])
 	session_user = frappe.session.user
-	#delete later
+	
+	
 	if session_user == 'Administrator':
 		session_user = 'aarav.patel@appraisepro.awsapps.com'
 
