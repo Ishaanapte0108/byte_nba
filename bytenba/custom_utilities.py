@@ -62,7 +62,7 @@ def uploadToBlob(file, filename):
 
 			connect_str = "DefaultEndpointsProtocol=https;EndpointSuffix=core.windows.net;AccountName=appraiseteststorage;AccountKey=sxAY187MXRIf5voMhZcIGH4R48KZukd58HrEmKyp+4coax/i4CaIp4qr2ULgtWU6qwdGXzPU9Fau+ASttKoLSA==;BlobEndpoint=https://appraiseteststorage.blob.core.windows.net/;FileEndpoint=https://appraiseteststorage.file.core.windows.net/;QueueEndpoint=https://appraiseteststorage.queue.core.windows.net/;TableEndpoint=https://appraiseteststorage.table.core.windows.net/"
 			# Create BlobServiceClient
-			blob_service_client = BlobServiceClient.from_connection_string(connect_str)
+			# blob_service_client = BlobServiceClient.from_connection_string(connect_str)
 
 			name = filename.strip().lower()
 
@@ -79,9 +79,9 @@ def uploadToBlob(file, filename):
 			formatted_blob_name = name = name[:1024]
 
 			# Blob client with formatted name
-			blob_client = blob_service_client.get_blob_client(container="firsttestcontainer", blob=formatted_blob_name)
+			# blob_client = blob_service_client.get_blob_client(container="firsttestcontainer", blob=formatted_blob_name)
 
-			blob_client.upload_blob(file)
+			# blob_client.upload_blob(file)
 
 			return "success"
 
