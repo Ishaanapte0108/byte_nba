@@ -1,0 +1,13 @@
+{
+ "creation": "2024-03-27 23:38:49.544252",
+ "docstatus": 0,
+ "doctype": "Dashboard Chart Source",
+ "idx": 0,
+ "modified": "2024-03-27 23:38:49.544252",
+ "modified_by": "Administrator",
+ "module": "Administrative Bucket",
+ "name": "Ab Source",
+ "owner": "Administrator",
+ "source_name": "Ab Source",
+ "timeseries": 0
+}

@@ -56,7 +56,7 @@ frappe.query_reports["Analysis"] = {
 				if (value >= 100){
 					value = '<b style="color: green;">' + value + '</b>';
 				}
-    }
+    }	
     return value;
 	},
 };

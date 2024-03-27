@@ -31,9 +31,10 @@ app_license = "MIT"
 # include js in doctype views
 # doctype_js = {"doctype" : "public/js/doctype.js"}
 
+
 website_context = {
-	"favicon": "/assets/bytenba/frappe.png",
-	"splash_image": "/assets/bytenba/frappe.png"
+	"favicon": "/assets/bytenba/finalAppraiseLogo.png",
+	"splash_image": "/assets/bytenba/finalAppraiseLogo.png",
 }
 
 doctype_list_js = {
@@ -82,7 +83,7 @@ sounds = [
 # ----------
 
 # application home page (will override Website Settings)
-home_page = "index"
+# home_page = "index"
 
 # website user home page (by Role)
 # role_home_page = {

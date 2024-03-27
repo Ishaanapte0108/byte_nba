@@ -1,0 +1,13 @@
+{
+ "creation": "2024-03-27 23:15:43.668680",
+ "docstatus": 0,
+ "doctype": "Dashboard Chart Source",
+ "idx": 0,
+ "modified": "2024-03-27 23:15:43.668680",
+ "modified_by": "Administrator",
+ "module": "Student Development",
+ "name": "Sd source",
+ "owner": "Administrator",
+ "source_name": "Sd source",
+ "timeseries": 0
+}
