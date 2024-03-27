@@ -9,20 +9,24 @@ def get(**kwargs):
 	
 	filters = frappe.parse_json(kwargs['filters'])
 	session_user = frappe.session.user
+	
+	#delete later
+	if session_user == 'Administrator':
+		session_user = 'aarav.patel@appraisepro.awsapps.com'
 
 	
-	document_types = ['Certification for courses allotted' , 'Courses taught', 'BSA guest lecture','BSA industrial visit', 'BSA-Co-curricular', 		'Laboratory Work Or Case Studies', 'Course-lab outcome attainment', 'ME Projects', 'Average Student Attendance',  'Exam related work',  'BSA-Mini Prj', 'Innovation in TLP','Contribution in learning resources development', 'Subject head-mini project','BE Projects', 'PhD', 'Grades in preceding semester preview', 'Grades in preceding semester review']
+	document_types = ['Certification for courses allotted' , 'Courses taught', 'BSA guest lecture','BSA industrial visit', 'BSA-Co-curricular', 		'Laboratory Work Or Case Studies', 'Course-lab outcome attainment', 'ME Projects',  'Exam related work',  'BSA-Mini Prj', 'Innovation in TLP','Contribution in learning resources development', 'Subject head-mini project','BE Projects', 'PhD', 'Grades in preceding semester preview', 'Grades in preceding semester review']
 
 	data = []
 
 	metadata = frappe.get_doc('Academic meta data')
 	year = metadata.year
 	sem = metadata.sem
-	print(year, sem)
+	
 
 	for doc in document_types:
 
-			data_tuple = frappe.db.get_all(doc, filters={"owner": 'aarav.patel@appraisepro.awsapps.com', 'academic_year': year, 'semester': sem}, pluck = 'approved')
+			data_tuple = frappe.db.get_all(doc, filters={"owner": session_user, 'academic_year': year, 'semester': sem}, pluck = 'approved')
 
 			if data_tuple:
 				if data_tuple[0] == 1:

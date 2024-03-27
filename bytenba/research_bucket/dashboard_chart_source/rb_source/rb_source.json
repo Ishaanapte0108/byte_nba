@@ -1,0 +1,13 @@
+{
+ "creation": "2024-03-27 23:28:07.762540",
+ "docstatus": 0,
+ "doctype": "Dashboard Chart Source",
+ "idx": 0,
+ "modified": "2024-03-27 23:28:07.762540",
+ "modified_by": "Administrator",
+ "module": "Research Bucket",
+ "name": "Rb Source",
+ "owner": "Administrator",
+ "source_name": "Rb Source",
+ "timeseries": 0
+}
