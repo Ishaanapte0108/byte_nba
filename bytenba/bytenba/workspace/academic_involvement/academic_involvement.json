@@ -1,0 +1,34 @@
+{
+ "charts": [],
+ "content": "[{\"id\":\"0tXKLBKB6q\",\"type\":\"custom_block\",\"data\":{\"custom_block_name\":\"newAI\",\"col\":12}}]",
+ "creation": "2024-03-24 21:22:11.510540",
+ "custom_blocks": [
+  {
+   "custom_block_name": "newAI",
+   "label": "newAI"
+  }
+ ],
+ "docstatus": 0,
+ "doctype": "Workspace",
+ "for_user": "",
+ "hide_custom": 0,
+ "icon": "edit",
+ "idx": 1,
+ "indicator_color": "",
+ "is_hidden": 0,
+ "label": "Academic Involvement",
+ "links": [],
+ "modified": "2024-03-27 16:01:18.798505",
+ "modified_by": "Administrator",
+ "module": "bytenba",
+ "name": "Academic Involvement",
+ "number_cards": [],
+ "owner": "Administrator",
+ "parent_page": "",
+ "public": 1,
+ "quick_lists": [],
+ "roles": [],
+ "sequence_id": 2.0,
+ "shortcuts": [],
+ "title": "Academic Involvement"
+}
